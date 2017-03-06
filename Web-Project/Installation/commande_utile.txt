@@ -37,8 +37,10 @@ Création de l'application et des modèles (rendez vous dans le dossier contenan
 
 2. Rd-vous dans le dossier nomapplication, ouvrez le fichier modèles et adapter le à votre choix. (pas besoin si déjà modifié)
 
-3. Le fichier modèle créé, modifié, exectuer la commande makemigrations
+3. Le fichier modèle créé, modifié, exectuer la commande :
+ python manage.py makemigrations
 
-4. Ensuite executer la commande migrate
+4. Ensuite executer la commande:
+  python manage.py migrate
 
 
