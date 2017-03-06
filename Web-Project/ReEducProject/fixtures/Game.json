@@ -1,0 +1,18 @@
+[
+  {
+    "model": "reeduc.Game",
+    "pk": 1,
+    "fields": {
+      "name": "Coordinate Finger",
+      "description": "Using blablablabl"
+    }
+  },
+  {
+    "model": "reeduc.Game",
+    "pk": 2,
+    "fields": {
+      "name": "Coordinate Arms",
+      "description": "Using blablablabl"
+    }
+  }
+]
