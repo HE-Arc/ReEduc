@@ -8,11 +8,19 @@ class Game(models.Model):
     description = models.CharField(max_length=1000)
 
 class Player(models.Model):
+    STRONG_ARM_CHOICE= (
+        ('R', 'RIGHT'),
+        ('L', 'LEFT'),
+    )
+    GENDER_CHOICE = (
+        ('M', 'MALE'),
+        ('F', 'FEMALE'),
+    )
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     size = models.IntegerField()
     weight = models.IntegerField()
-    gender = models.CharField(max_length=1)
-    strong_arm = models.CharField(max_length=1)
+    gender = models.CharField(max_length=1,choices=STRONG_ARM_CHOICE)
+    strong_arm = models.CharField(max_length=1,choices=GENDER_CHOICE)
     handicap = models.CharField(max_length=1000)
     birthdate = models.DateField()
     spec_id = models.CharField(max_length=50)
