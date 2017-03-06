@@ -37,10 +37,21 @@ Création de l'application et des modèles (rendez vous dans le dossier contenan
 
 2. Rd-vous dans le dossier nomapplication, ouvrez le fichier modèles et adapter le à votre choix. (pas besoin si déjà modifié)
 
-3. Le fichier modèle créé, modifié, exectuer la commande :
+3. modifier le fichier settings.py. dans la section installed_apps, rajouter 'reeduc'
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'reeduc',
+]
+
+4. Le fichier modèle créé, modifié, exectuer la commande :
  python manage.py makemigrations
 
-4. Ensuite executer la commande:
+5. Ensuite executer la commande:
   python manage.py migrate
 
 
