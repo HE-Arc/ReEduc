@@ -30,5 +30,15 @@ mise en place postgres django
 6. démarrer le projet django
      python manage.py runserver
 
+Création de l'application et des modèles (rendez vous dans le dossier contenant manage.py)
+
+1. Après avoir créer l'architecture principale du projet, il faut créer l'application, pour cela on utilise la commande:
+    python manage.py startapp nomapplication (pas besoin de faire si elle existe)
+
+2. Rd-vous dans le dossier nomapplication, ouvrez le fichier modèles et adapter le à votre choix. (pas besoin si déjà modifié)
+
+3. Le fichier modèle créé, modifié, exectuer la commande makemigrations
+
+4. Ensuite executer la commande migrate
 
 
