@@ -1,0 +1,34 @@
+
+mise en place du projet.
+
+1. installation virtual env :
+    pip install virtualenv ( permet d'installer virtualenv)
+
+2. création d'un virtual env :
+    virtualenv venv
+
+3. activation du venv :
+    source venv/bin/activate (sous linux / mac)
+    aller dans le dossier venv/scripts puis taper activate (windows)
+
+4. installer les requirements du fichier requirements.txt
+    pip install -r requirements.txt
+
+
+mise en place postgres django
+
+1. récupérer le nom d'utilisateur et le mots de passe depuis postgres.
+
+2. créer dans postgres une nouvelle base de donnée nommée "dbPostgres"
+
+3. dans le projet django, ouvrir le fichier settings.py
+
+4. dans ce fichier se trouve une catégorie database. remplacer les informations nom = dbPostgres, puis vos identifiants.
+
+5. activer le venv (voir point mise en place du projet)
+
+6. démarrer le projet django
+     python manage.py runserver
+
+
+
