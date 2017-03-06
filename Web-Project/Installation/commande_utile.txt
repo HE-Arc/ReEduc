@@ -55,3 +55,8 @@ INSTALLED_APPS = [
   python manage.py migrate
 
 
+ACTIVATION MATERIALIZE
+
+attention pas oublier de faire l'install depuis requirement pour materialize-css
+
+1.  modifier le fichier settings.py. dans la section installed_apps, rajouter 'materialize'
