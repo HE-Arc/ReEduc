@@ -1,10 +1,11 @@
 from django.conf.urls import url
-from django.views.generic.base import TemplateView
+from . import views
+
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='index.html'), {'connect': True}, name="index"),
-    url(r'^home', TemplateView.as_view(template_name='home.html'), name="home"),
-    url(r'^login', TemplateView.as_view(template_name='login.html'), name="login"),
-    url(r'^subscribe', TemplateView.as_view(template_name='subscribe.html'), name="subscribe"),
-    url(r'^view', TemplateView.as_view(template_name='view.html'), name="view"),
+    url(r'^$', views.index, name="index"),
+    url(r'^home', views.home, name="home"),
+    url(r'^login', views.login, name="login"),
+    url(r'^subscribe', views.subscribe, name="subscribe"),
+    url(r'^view', views.view, name="view"),
 ]
