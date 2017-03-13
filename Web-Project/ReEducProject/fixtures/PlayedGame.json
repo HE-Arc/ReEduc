@@ -1,0 +1,27 @@
+[
+  {
+    "model": "reeduc.playedgame",
+    "pk": 1,
+    "fields": {
+      "comments":"Beaucoup d'erreurs ont été détectées avec l'index et le pouce",
+      "needed_time": 187,
+      "score": 10545,
+      "errors": 28,
+      "game_id":1,
+      "player_id":2
+    }
+  },
+
+  {
+    "model": "reeduc.playedgame",
+    "pk": 2,
+    "fields": {
+      "comments":"Beaucoup d'erreurs ont été détectées avec l'index",
+      "needed_time": 154,
+      "score": 13450,
+      "errors": 15,
+      "game_id":1,
+      "player_id":1
+    }
+  }
+]
