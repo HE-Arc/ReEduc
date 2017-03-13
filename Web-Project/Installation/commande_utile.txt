@@ -77,4 +77,7 @@ attention pas oublier de faire l'install depuis requirement pour materialize-css
 
 Ajout de données à la base de données (rendez vous dans le dossier contenant manage.py)
 1. Executer: python manage.py loaddata .\fixtures\nomFichier.json
+Il faut ajouter en premier le fichier Game.json, suivi de User.json et dernièrement le fichier Player.json
+Cela va vous ajouter l'utilisateur root avec mot de passe root à la base de données.
+
 

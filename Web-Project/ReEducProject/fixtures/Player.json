@@ -1,0 +1,32 @@
+[
+  {
+    "model": "reeduc.Player",
+    "pk": 1,
+    "fields": {
+      "size": 200,
+      "weight": 80,
+      "gender": "M",
+      "strong_arm": "L",
+      "handicap":"T:T:T:T:T:T:T:T:T:T:F:F",
+      "birthdate":"1994-01-03",
+      "user_id":1,
+      "spec_id":"HAhdha4f68a",
+      "phone_number":"0775142122"
+    }
+  },
+  {
+    "model": "reeduc.Player",
+    "pk": 2,
+    "fields": {
+      "size": 188,
+      "weight": 75,
+      "gender": "M",
+      "strong_arm": "R",
+      "handicap":"T:T:T:T:T:T:T:T:T:T:F:T",
+      "birthdate":"1994-04-18",
+      "user_id":2,
+      "spec_id":"AHdnasfkhafkjaj",
+      "phone_number":"0786532163"
+    }
+  }
+]
