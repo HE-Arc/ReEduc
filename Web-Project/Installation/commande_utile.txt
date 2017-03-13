@@ -81,4 +81,5 @@ Ajout de données à la base de données (rendez vous dans le dossier contenant 
     Cela va vous ajouter l'utilisateur root avec mot de passe root à la base de données. Finalement ajouter PlayedGame.json.)
 
 
-
+Créer les routes:
+utiliser le fichier reeduc/url pour y créer les routes en fonction des noms des fichiers html contenus dans reeduc/templates
