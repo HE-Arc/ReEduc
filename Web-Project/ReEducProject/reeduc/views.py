@@ -19,3 +19,6 @@ def subscribe(request):
 
 def view(request):
     return render(request, 'view.html', {'connection': connection})
+
+def homeSelected(request):
+    return render(request, 'homeSelected.html', {'connection': connection})
