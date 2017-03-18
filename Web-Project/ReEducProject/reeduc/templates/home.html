@@ -1,20 +1,55 @@
 {% extends 'templateApp.html' %}
 {% block body %}
- <div class="row">
+    <div class="row">
         <div class="col s5 red">
-            game 1
-        <img src="/static/game.jpg" alt="game1"/>
+            <div class="card">
+                <div class="card-image">
+                    {% load static %}
+                    <img src="{% static "game.jpg" %}" alt="gam1"/>
+                    <span class="card-title">Game one</span>
+                </div>
+                <div class="card-content">
+                    <p>Ceci est le premier jeu ainsi que ça description ici présente</p>
+                </div>
+            </div>
         </div>
         <div class="col s5 offset-s2 green">
-            game 2
+            <div class="card">
+                <div class="card-image">
+                    {% load static %}
+                    <img src="{% static "game.jpg" %}" alt="game2"/>
+                    <span class="card-title">Game two</span>
+                </div>
+                <div class="card-content">
+                    <p>Ceci est le second jeu ainsi que ça description ici présente</p>
+                </div>
+            </div>
         </div>
- </div>
+    </div>
     <div class="row">
-        <div class="col s5 teal blue">
-            game 3
+        <div class="col s5 blue">
+            <div class="card">
+                <div class="card-image">
+                    {% load static %}
+                    <img src="{% static "game.jpg" %}" alt="gam3"/>
+                    <span class="card-title">Game three</span>
+                </div>
+                <div class="card-content">
+                    <p>Ceci est le troisième jeu ainsi que ça description ici présente</p>
+                </div>
+            </div>
         </div>
         <div class="col s5 offset-s2 yellow">
-            game 4
+            <div class="card">
+                <div class="card-image">
+                    {% load static %}
+                    <img src="{% static "game.jpg" %}" alt="game4"/>
+                    <span class="card-title">Game four</span>
+                </div>
+                <div class="card-content">
+                    <p>Ceci est le quatrième jeu ainsi que ça description ici présente</p>
+                </div>
+            </div>
         </div>
- </div>
+    </div>
 {% endblock %}
