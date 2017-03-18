@@ -13,7 +13,7 @@
             <div class="navbar">
                 <nav>
                     <div class="nav-wrapper grey lighten-5">
-                        <ul class="right teal-text text-lighten-3">
+                        <ul class="right">
                             <!-- Dropdown Trigger -->
                             <li><a href="{% url 'login' %}" class="teal-text text-lighten-3">login</a></li>
                             <li><a href="{% url 'subscribe' %}" class="teal-text text-lighten-3">inscription</a></li>
@@ -31,6 +31,8 @@
                 </nav>
             </div>
         </div>
+    </div>
+    <div class="row">
         <div class="col s10 offset-s1">
             {% block body %}
             {% endblock %}
