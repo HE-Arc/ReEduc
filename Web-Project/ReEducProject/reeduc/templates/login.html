@@ -1,4 +1,50 @@
 {% extends 'templateApp.html' %}
 {% block body %}
-<h1>hello Login</h1>
+<div id="login-page" class="valign-wrapper">
+
+    <div class="col s6 z-depth-4 card-panel valign">
+      <form class="login-form">
+        <div class="row">
+          <div class="input-field col s12 center">
+              <h1>ReEduc</h1>
+            <!--<img src="images/login-logo.png" alt="" class="circle responsive-img valign profile-image-login">-->
+            <h4>You must login to continue</h4>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="username" type="text">
+            <label for="username" class="center-align">Username</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+            <input id="password" type="password">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m12 l12  login-text">
+              <input type="checkbox" id="remember-me" />
+              <label for="remember-me">Remember me</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <a href="index.html" class="btn waves-effect waves-light teal lighten-3 col s12">Login</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6 m6 l6">
+            <p class="margin medium-small"><a href="page-register.html" class="teal-text text-lighten-3">Register Now!</a></p>
+          </div>
+          <div class="input-field col s6 m6 l6">
+              <p class="margin right-align medium-small"><a href="page-forgot-password.html" class="teal-text text-lighten-3">Forgot password ?</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 {% endblock %}
