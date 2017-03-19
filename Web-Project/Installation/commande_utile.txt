@@ -91,3 +91,13 @@ SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 
 ensuite dans la catégorie TEMPLATE, remplacé le DIRS par :
  'DIRS': [os.path.join(SETTINGS_PATH, 'template')],
+
+
+
+ Installation et utilisation de Graphos
+ Rendez vous dans ton environnement virtuel ensuite:
+    - pip install django-graphos
+    - dans les INSTALLED_APPS du fichier settings, ajoutez 'graphos',
+    - Créer votre graphe dans le fichier views.py, le passer en paramètre avec de la méthode render()
+    - Utiliser le graphe dans le template de vue
+(Pour avoir un example, regardez le fichier views.py et view.py)
