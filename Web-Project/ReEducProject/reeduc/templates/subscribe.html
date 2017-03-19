@@ -1,4 +1,84 @@
 {% extends 'templateApp.html' %}
 {% block body %}
-<h1>hello Subscribe</h1>
+<div id="subscribe-page" class="valign-wrapper">
+    <div class="col s12 z-depth-4 card-panel valign">
+        <div class="row">
+            <div class="input-field col s12 center">
+                <!--<img src="images/login-logo.png" alt="" class="circle responsive-img valign profile-image-login">-->
+                <h4>Please enter your informations</h4>
+            </div>
+        </div>
+        <div class="row">
+            <form class="subscribe-form">
+                <div class="row">
+                    <div class="col s6">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="firstname" type="text">
+                                <label for="firstname" class="center-align">First Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="lastname" type="text">
+                                <label for="lastname" class="center-align">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="username" type="text">
+                                <label for="username" class="center-align">Username</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password" type="password">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="birthdate" type="text">
+                                <label for="birthdate" class="center-align">Birth Date</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email">
+                                <label for="email" class="center-align">E-Mail</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="phone" type="text">
+                                <label for="phone" class="center-align">Phone</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="input-field col s6 login-text">
+                            <input type="checkbox" id="test"/>
+                            <label for="test">test</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div clas="row">
+                    <div class="valign-wrapper">
+                        <div class="col s6 valign">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <a href="index.html"
+                                       class="btn waves-effect waves-light teal lighten-3 col s12">Subscribe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
 {% endblock %}
