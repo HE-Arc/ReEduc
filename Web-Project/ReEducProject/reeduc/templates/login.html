@@ -1,9 +1,12 @@
 {% extends 'templateApp.html' %}
 {% block body %}
+{% if user.is_authenticated %}
+<p><a href="logout.html">Logout</a></p>
+{% else %}
 <div id="login-page" class="valign-wrapper">
 
     <div class="col s6 z-depth-4 card-panel valign">
-        <form class="login-form">
+        <form class="login-form" action='/reeduc/login/' method='post' >  {% csrf_token %}
             <div class="row">
                 <div class="input-field col s12 center">
                     <h1>ReEduc</h1>
@@ -14,14 +17,14 @@
             <div class="row margin">
                 <div class="input-field col s12">
                     <i class="mdi-social-person-outline prefix"></i>
-                    <input id="username" type="text">
-                    <label for="username" class="center-align">Username</label>
+                    <input id="username" name='username' type="text">
+                    <label for="username"  class="center-align">Username</label>
                 </div>
             </div>
             <div class="row margin">
                 <div class="input-field col s12">
                     <i class="mdi-action-lock-outline prefix"></i>
-                    <input id="password" type="password">
+                    <input id="password" type="password" name='password' >
                     <label for="password">Password</label>
                 </div>
             </div>
@@ -32,9 +35,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s12">
-                    <a href="index.html" class="btn waves-effect waves-light teal lighten-3 col s12">Login</a>
-                </div>
+                    <button type="submit">Login</button>
             </div>
             <div class="row">
                 <div class="input-field col s6 m6 l6">
@@ -50,4 +51,5 @@
         </form>
     </div>
 </div>
+{% endif %}
 {% endblock %}

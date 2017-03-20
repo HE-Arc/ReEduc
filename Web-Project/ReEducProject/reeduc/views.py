@@ -1,24 +1,41 @@
-from django.shortcuts import render
-from django.http import HttpResponse
 from chartit import DataPool, Chart
 from reeduc.models import PlayedGame
-
+from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
-connection = True
+#Variable example to pass to the templates
+VarExampleToPassToTemplate = True
 
-def index(request):
-    return render(request, 'index.html', {'connection': connection})
-
-def home(request):
-    return render(request, 'home.html', {'connection': connection})
+#Authentification part
+def logout(request):
+    auth_logout(request)
+    return render(request, 'login.html', {'var': VarExampleToPassToTemplate})
 
 def login(request):
-    return render(request, 'login.html', {'connection': connection})
+    username = request.POST.get('username')
+    password = request.POST.get('password')
+    user = authenticate(username=username, password=password)
+    if user is not None:
+        auth_login(request, user)
+        return render(request, 'home.html', {'var': VarExampleToPassToTemplate})
+    else:
+        return render(request, 'login.html', {'var': VarExampleToPassToTemplate})
 
 def subscribe(request):
-    return render(request, 'subscribe.html', {'connection': connection})
+    return render(request, 'subscribe.html', {'var': VarExampleToPassToTemplate})
 
+
+#Website Pages
+def index(request):
+    return render(request, 'index.html', {'var': VarExampleToPassToTemplate})
+
+@login_required(login_url='/reeduc/login/')
+def home(request):
+    return render(request, 'home.html', {'var': VarExampleToPassToTemplate})
+
+# Best decorator ever ->
+@login_required(login_url='/reeduc/login/')
 def view(request):
     # Step 1: Create a DataPool with the data we want to retrieve.
     datas = \
@@ -52,8 +69,9 @@ def view(request):
                     'text': 'Date'}}})
 
     # Step 3: Send the chart object to the template.
-    context = {'chart': cht,'connection': connection}
+    context = {'chart': cht}
     return render(request, 'view.html', context)
 
+@login_required(login_url='/reeduc/login/')
 def homeSelected(request):
-    return render(request, 'homeSelected.html', {'connection': connection})
+    return render(request, 'homeSelected.html', {'connection': VarExampleToPassToTemplate})

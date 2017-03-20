@@ -1,7 +1,7 @@
 [
   {
     "model": "reeduc.Player",
-    "pk": 1,
+    "pk": 3,
     "fields": {
       "size": 200,
       "weight": 80,
@@ -9,14 +9,14 @@
       "strong_arm": "L",
       "handicap":"T:T:T:T:T:T:T:T:T:T:F:F",
       "birthdate":"1994-01-03",
-      "user_id":1,
-      "spec_id":"HAhdha4f68a",
+      "user_id":3,
+      "spec_id":"afjhafoihfj",
       "phone_number":"0775142122"
     }
   },
   {
     "model": "reeduc.Player",
-    "pk": 2,
+    "pk": 4,
     "fields": {
       "size": 188,
       "weight": 75,
@@ -24,8 +24,8 @@
       "strong_arm": "R",
       "handicap":"T:T:T:T:T:T:T:T:T:T:F:T",
       "birthdate":"1994-04-18",
-      "user_id":2,
-      "spec_id":"AHdnasfkhafkjaj",
+      "user_id":4,
+      "spec_id":"DJKHisahdas",
       "phone_number":"0786532163"
     }
   }

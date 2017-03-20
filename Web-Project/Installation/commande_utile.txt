@@ -71,10 +71,6 @@ attention pas oublier de faire l'install depuis requirement pour materialize-css
 1.  modifier le fichier settings.py. dans la section installed_apps, rajouter 'materialize'
 
 
-
-
-
-
 Ajout de données à la base de données (rendez vous dans le dossier contenant manage.py)
 1. Executer: python manage.py loaddata .\fixtures\nomFichier.json
     (Il faut ajouter en premier le fichier Game.json, suivi de User.json et dernièrement le fichier Player.json
@@ -94,7 +90,7 @@ ensuite dans la catégorie TEMPLATE, remplacé le DIRS par :
 
 
 //////////////////////////////IMPORTANT///////////////////////////////////
-L'idée d'utiliser Graphos a été abandonné, on utiliser Chartit maintenant.
+L'idée d'utiliser Graphos a été abandonné, on utilise Chartit maintenant.
 Cette app permet la création de graph, comme Graphos en soit, mais celle-ci est compatible
 avec python3 alors que Graphos est jugé "a risques".
 
@@ -111,3 +107,8 @@ Nouvelle migration disponible. Pour pouvoir effectuer cette mise à jour sans pr
     -   Rendez-vous sur PGAdmin, supprimer les données de la table played_game (pour cela view data et supprimer les données)
     -   Ensuite rendez-vous dans votre environnement virtuel et exécuter: python manage.py migrate
     -   Pour finir exécuter la commande: python manage.py loaddata .\fixtures\PlayedGame.json
+
+
+Utilisation de la partie Login de l'application. Pour pouvoir utiliser le login de l'appliation il faut créer un superuser:
+    -   Pour cela rend-vous dans votre environement virtuel et entrer cette commande: python manage.py createsuperuser
+    -   Remplissez les informations demandez et utiliser ce compte pour vous loguer
