@@ -93,11 +93,21 @@ ensuite dans la catégorie TEMPLATE, remplacé le DIRS par :
  'DIRS': [os.path.join(SETTINGS_PATH, 'template')],
 
 
+//////////////////////////////IMPORTANT///////////////////////////////////
+L'idée d'utiliser Graphos a été abandonné, on utiliser Chartit maintenant.
+Cette app permet la création de graph, comme Graphos en soit, mais celle-ci est compatible
+avec python3 alors que Graphos est jugé "a risques".
 
- Installation et utilisation de Graphos
- Rendez vous dans ton environnement virtuel ensuite:
-    - pip install django-graphos
-    - dans les INSTALLED_APPS du fichier settings, ajoutez 'graphos',
-    - Créer votre graphe dans le fichier views.py, le passer en paramètre avec de la méthode render()
-    - Utiliser le graphe dans le template de vue
-(Pour avoir un example, regardez le fichier views.py et view.py)
+Installation de chartit:
+   -    Rendez-vous dans ton environement virtuel et entrer la commande suivante: pip install django django_chartit
+   -    Ajouter chartit au INSTALLED_APPS dans le fichier settings: 'chartit',
+   -    Pour avoir un example, voir le fichier views.py et viem.html
+
+Ou alors rd-vous à: http://www.idreammicro.com/post/django-chartit
+
+
+///////////////////////////// IMPORTANT////////////////////////////////////
+Nouvelle migration disponible. Pour pouvoir effectuer cette mise à jour sans problème:
+    -   Rendez-vous sur PGAdmin, supprimer les données de la table played_game (pour cela view data et supprimer les données)
+    -   Ensuite rendez-vous dans votre environnement virtuel et exécuter: python manage.py migrate
+    -   Pour finir exécuter la commande: python manage.py loaddata .\fixtures\PlayedGame.json

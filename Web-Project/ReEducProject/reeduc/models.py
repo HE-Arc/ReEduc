@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
+from datetime import datetime
 
 # Create your models here.
 class Game(models.Model):
@@ -34,5 +35,6 @@ class PlayedGame(models.Model):
     comments = models.CharField(max_length=1000)
     needed_time = models.IntegerField()
     score = models.IntegerField()
+    date = models.DateTimeField(default=datetime.now(),blank=True)
     errors = models.IntegerField()
 
