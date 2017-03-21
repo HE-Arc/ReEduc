@@ -1,13 +1,15 @@
 from chartit import DataPool, Chart
-from reeduc.models import PlayedGame
+from reeduc.models import PlayedGame, Player
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from django.utils.crypto import get_random_string
 
 #Variable example to pass to the templates
 VarExampleToPassToTemplate = True
 
-#Authentification part
+#Website authentification pages
 def logout(request):
     auth_logout(request)
     return render(request, 'login.html', {'var': VarExampleToPassToTemplate})
@@ -23,10 +25,110 @@ def login(request):
         return render(request, 'login.html', {'var': VarExampleToPassToTemplate})
 
 def subscribe(request):
-    return render(request, 'subscribe.html', {'var': VarExampleToPassToTemplate})
+
+    #Récupération des infos du formulaires
+    user_username = request.POST.get('username')
+    user_password = request.POST.get('password')
+    user_email = request.POST.get('email')
+    user_firstname = request.POST.get('firstname')
+    user_lastname = request.POST.get('lastname')
+
+    player_birthdate = request.POST.get('birthdate')
+    player_phone = request.POST.get('phone')
+    player_gender = request.POST.get('gender')
+    player_height = request.POST.get('height')
+    player_weight = request.POST.get('weight')
+
+    #Fingers
+    player_thumbleft = request.POST.get('thumbleft', False)
+    player_forefingerleft = request.POST.get('forefingerleft', False)
+    player_middlefingerleft = request.POST.get('middlefingerleft', False)
+    player_ringfingerleft = request.POST.get('ringfingerleft', False)
+    player_littlefingerleft = request.POST.get('littlefingerleft', False)
+
+    player_thumbright = request.POST.get('thumbright',False)
+    player_forefingerright = request.POST.get('forefingerright',False)
+    player_middlefingerright = request.POST.get('middlefingerright',False)
+    player_ringfingerright = request.POST.get('ringfingerright',False)
+    player_littlefingerright = request.POST.get('littlefingerright', False)
+
+    #Arms
+    player_leftarm = request.POST.get('leftarm', False)
+    player_rightarm = request.POST.get('rightarm', False)
+    player_strongarm=request.POST.get('player_strongarm')
+
+    if user_username is not None: #<----------- Devra être remplacé par une validation de formulaire
+        if not User.objects.filter(username=user_username).exists():
+            if not User.objects.filter(email=user_email).exists():
+
+                HandicapsVals = []
+                HandicapsVals.append(player_thumbleft)
+                HandicapsVals.append(player_forefingerleft)
+                HandicapsVals.append(player_middlefingerleft)
+                HandicapsVals.append(player_ringfingerleft)
+                HandicapsVals.append(player_littlefingerleft)
+                HandicapsVals.append(player_thumbright)
+                HandicapsVals.append(player_forefingerright)
+                HandicapsVals.append(player_middlefingerright)
+                HandicapsVals.append(player_ringfingerright)
+                HandicapsVals.append(player_littlefingerright)
+                HandicapsVals.append(player_leftarm)
+                HandicapsVals.append(player_rightarm)
+
+                strHandicaps =""
+                for i in range(len(HandicapsVals)):
+                    if HandicapsVals[i]:
+                        strHandicaps += "F;"
+                    else:
+                        strHandicaps += "T;"
+                genderValue=''
+                if player_gender=='Man':
+                    genderValue='M'
+                else:
+                    genderValue='F'
+
+                strongArmValue = ''
+                if player_strongarm == 'Left':
+                    strongArmValue = 'L'
+                else:
+                    strongArmValue = 'R'
+
+                # Create a new User
+                user = User(
+                    first_name=user_firstname,
+                    is_staff=True,
+                    is_superuser=True,
+                    last_name=user_lastname,
+                    username=user_username
+                )
+                user.set_password(user_password)
+                user.save()
+
+                #Generate spec_id
+                player_spec_id = get_random_string(length=6)
+                while(Player.objects.filter(spec_id=player_spec_id).exists()):
+                    player_spec_id=get_random_string(length=6)
+
+                # Create a new Player (player is an extention of user)
+                p = Player(user=User.objects.get(username=user_username),
+                           size=player_height,
+                           weight=player_weight,
+                           gender=genderValue,
+                           strong_arm=strongArmValue,
+                           handicap=strHandicaps,
+                           birthdate=player_birthdate,
+                           spec_id=player_spec_id,
+                           phone_number=player_phone
+                           )
+                p.save()
+
+                return render(request, 'login.html', {'var': VarExampleToPassToTemplate})
+    else:
+        return render(request, 'subscribe.html', {'var': VarExampleToPassToTemplate})
 
 
-#Website Pages
+
+#Website content pages
 def index(request):
     return render(request, 'index.html', {'var': VarExampleToPassToTemplate})
 

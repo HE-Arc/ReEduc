@@ -9,48 +9,48 @@
             </div>
         </div>
         <div class="row">
-            <form class="subscribe-form">
+            <form class="subscribe-form" action='/reeduc/subscribe/' method='post'> {% csrf_token %}
                 <div class="row">
                     <div class="col s6">
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="firstname" type="text">
+                                <input id="firstname" type="text" name="firstname">
                                 <label for="firstname" class="center-align">First Name</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="lastname" type="text">
+                                <input id="lastname" type="text" name="lastname">
                                 <label for="lastname" class="center-align">Last Name</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="username" type="text">
+                                <input id="username" type="text" name="username">
                                 <label for="username" class="center-align">Username</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="password" type="password">
+                                <input id="password" type="password" name="password">
                                 <label for="password">Password</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="birthdate" type="text">
+                                <input id="birthdate" type="text" name="birthdate">
                                 <label for="birthdate" class="center-align">Birth Date</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="email" type="email">
+                                <input id="email" type="email" name="email">
                                 <label for="email" class="center-align">E-Mail</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="phone" type="text">
+                                <input id="phone" type="text" name="phone">
                                 <label for="phone" class="center-align">Phone</label>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                         <div class="row"> <!--a modifier -->
                             <div class="input-field col s12">
                                 <select>
-                                    <option value="" disabled selected>Choose your gender</option>
+                                    <option value="" name="gender" disabled selected>Choose your gender</option>
                                     <option value="Man">Man</option>
                                     <option value="Woman">Woman</option>
                                 </select>
@@ -69,11 +69,11 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s6">
-                                <input id="height" type="text"><!-- modif type -->
+                                <input id="height" type="text" name="height"><!-- modif type -->
                                 <label for="height" class="center-align">Height</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="weight" type="text"><!-- modif type -->
+                                <input id="weight" type="text" name="weight"><!-- modif type -->
                                 <label for="weight" class="center-align">Weight</label>
                             </div>
                         </div>
@@ -90,31 +90,31 @@
                             </div>
                             <div class="row">
                                 <div class="input-field col s12 login-text">
-                                    <input type="checkbox" id="thumbleft"/>
+                                    <input type="checkbox" id="thumbleft" name="thumbleft"/>
                                     <label for="thumbleft">Thumb</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12 login-text">
-                                    <input type="checkbox" id="forefingerleft"/>
+                                    <input type="checkbox" id="forefingerleft" name="forefingerleft"/>
                                     <label for="forefingerleft">Forefinger</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12 login-text">
-                                    <input type="checkbox" id="middlefingerleft"/>
+                                    <input type="checkbox" id="middlefingerleft" name="middlefingerleft"/>
                                     <label for="middlefingerleft">Middle Finger</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12 login-text">
-                                    <input type="checkbox" id="ringfingerleft"/>
+                                    <input type="checkbox" id="ringfingerleft" name="ringfingerleft"/>
                                     <label for="ringfingerleft">Ring Finger</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12 login-text">
-                                    <input type="checkbox" id="littlefingerleft"/>
+                                    <input type="checkbox" id="littlefingerleft" name="littlefingerleft"/>
                                     <label for="littlefingerleft">Little Finger</label>
                                 </div>
                             </div>
@@ -127,53 +127,74 @@
                             </div>
                             <div class="row">
                                 <div class="input-field col s12 login-text">
-                                    <input type="checkbox" id="thumbright"/>
+                                    <input type="checkbox" id="thumbright" name="thumbright"/>
                                     <label for="thumbright">Thumb</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12 login-text">
-                                    <input type="checkbox" id="forefingerright"/>
+                                    <input type="checkbox" id="forefingerright" name="forefingerright"/>
                                     <label for="forefingerright">Forefinger</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12 login-text">
-                                    <input type="checkbox" id="middlefingerright"/>
+                                    <input type="checkbox" id="middlefingerright" name="middlefingerright"/>
                                     <label for="middlefingerright">Middle Finger</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12 login-text">
-                                    <input type="checkbox" id="ringfingerright"/>
+                                    <input type="checkbox" id="ringfingerright" name="ringfingerright"/>
                                     <label for="ringfingerright">Ring Finger</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12 login-text">
-                                    <input type="checkbox" id="littlefingerright"/>
+                                    <input type="checkbox" id="littlefingerright" name="littlefingerright"/>
                                     <label for="littlefingerright">Little Finger</label>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12 login-text">
-                                <label>Hand Disabled</label>
+                                <label>Arm Disabled</label>
                             </div>
                         </div>
                         <div class="col s6">
                             <div class="row">
                                 <div class="input-field col s12 login-text">
-                                    <input type="checkbox" id="lefthand"/>
-                                    <label for="lefthand">Left Hand</label>
+                                    <input type="checkbox" id="leftarm" name="leftarm"/>
+                                    <label for="leftarm">Left Arm</label>
                                 </div>
                             </div>
                         </div>
                         <div class="col s6">
                             <div class="row">
                                 <div class="input-field col s12 login-text">
-                                    <input type="checkbox" id="righthand"/>
-                                    <label for="righthand">Right Hand</label>
+                                    <input type="checkbox" id="rightarm" name="rightarm"/>
+                                    <label for="rightarm">Right Arm</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 login-text">
+                                <label>Strong arm</label>
+                            </div>
+                        </div>
+                        <div class="col s6">
+                            <div class="row">
+                                <div class="input-field col s12 login-text">
+                                    <input type="radio" id="leftstrongarm" name="strongarm" value="Left"/>
+                                    <label for="leftstrongarm">Left Arm</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s6">
+                            <div class="row">
+                                <div class="input-field col s12 login-text">
+                                    <input type="radio" id="rightstrongarm" name="strongarm" value="Right"/>
+                                    <label for="rightstrongarm">Right Arm</label>
                                 </div>
                             </div>
                         </div>
@@ -184,10 +205,7 @@
                     <div class="valign-wrapper">
                         <div class="col s6 valign">
                             <div class="row">
-                                <div class="input-field col s12">
-                                    <a href="index.html"
-                                       class="btn waves-effect waves-light teal lighten-3 col s12">Subscribe</a>
-                                </div>
+                               <button type="submit">Subscribe</button>
                             </div>
                         </div>
                     </div>
