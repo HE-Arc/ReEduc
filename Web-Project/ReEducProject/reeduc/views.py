@@ -99,7 +99,8 @@ def subscribe(request):
                     is_staff=True,
                     is_superuser=True,
                     last_name=user_lastname,
-                    username=user_username
+                    username=user_username,
+                    email=user_email
                 )
                 user.set_password(user_password)
                 user.save()
@@ -118,7 +119,7 @@ def subscribe(request):
                            handicap=strHandicaps,
                            birthdate=player_birthdate,
                            spec_id=player_spec_id,
-                           phone_number=player_phone
+                           phone_number=player_phone,
                            )
                 p.save()
 
