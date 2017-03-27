@@ -140,12 +140,15 @@ def home(request):
 # Best decorator ever ->
 @login_required(login_url='/reeduc/login/')
 def view(request):
+    # Get actual connected user and get corresponding player datas
+    actualPlayer=Player.objects.get(user_id=request.user.id)
+
     # Step 1: Create a DataPool with the data we want to retrieve.
     datas = \
         DataPool(
             series=
             [{'options': {
-                'source': PlayedGame.objects.all()},
+                'source': PlayedGame.objects.filter(player_id=actualPlayer, game_id=1)},
                 'terms': [
                     'date',
                     'needed_time',
