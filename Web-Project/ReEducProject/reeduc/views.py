@@ -5,6 +5,9 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.utils.crypto import get_random_string
+from django.db.models import Max
+from django.db.models import Min
+
 
 #Variable example to pass to the templates
 VarExampleToPassToTemplate = True
@@ -17,9 +20,9 @@ def logout(request):
 def login(request):
     username = request.POST.get('username')
     password = request.POST.get('password')
-    user = authenticate(username=username, password=password)
-    if user is not None:
-        auth_login(request, user)
+    actualUser = authenticate(username=username, password=password)
+    if actualUser is not None:
+        auth_login(request, actualUser)
         return render(request, 'home.html', {'var': VarExampleToPassToTemplate})
     else:
         return render(request, 'login.html', {'var': VarExampleToPassToTemplate})
@@ -133,6 +136,7 @@ def subscribe(request):
 def index(request):
     return render(request, 'index.html', {'var': VarExampleToPassToTemplate})
 
+
 @login_required(login_url='/reeduc/login/')
 def home(request):
     return render(request, 'home.html', {'var': VarExampleToPassToTemplate})
@@ -142,13 +146,14 @@ def home(request):
 def view(request):
     # Get actual connected user and get corresponding player datas
     actualPlayer=Player.objects.get(user_id=request.user.id)
-
+    # Get all played games by this user
+    playedGames=PlayedGame.objects.filter(player_id=actualPlayer, game_id=1)
     # Step 1: Create a DataPool with the data we want to retrieve.
     datas = \
         DataPool(
             series=
             [{'options': {
-                'source': PlayedGame.objects.filter(player_id=actualPlayer, game_id=1)},
+                'source': playedGames},
                 'terms': [
                     'date',
                     'needed_time',
@@ -175,9 +180,24 @@ def view(request):
                     'text': 'Date'}}})
 
     # Step 3: Send the chart object to the template.
-    context = {'chart': cht}
-    return render(request, 'view.html', context)
+    return render(request, 'view.html', {'chart': cht,'playedGames':playedGames})
 
 @login_required(login_url='/reeduc/login/')
 def homeSelected(request):
     return render(request, 'homeSelected.html', {'connection': VarExampleToPassToTemplate})
+
+@login_required(login_url='/reeduc/login/')
+def account(request):
+    actualUser= User.objects.get(pk=request.user.id)
+    actualPlayer = Player.objects.get(user_id=request.user.id)
+    playedGames = PlayedGame.objects.filter(player_id=actualPlayer.pk)
+    bestScore=PlayedGame.objects.filter(player_id=actualPlayer.pk).aggregate(Max('score'))
+    maxScore=bestScore.get('score__max')
+    bestTime = PlayedGame.objects.filter(player_id=actualPlayer.pk).aggregate(Min('needed_time'))
+    minTime=bestTime.get('needed_time__min')
+    return render(request, 'account.html', {'actualUser': actualUser,
+                                            'actualPlayer':actualPlayer,
+                                            'playedGames':playedGames,
+                                            'maxScore': maxScore,
+                                            'minTime':minTime})
+# TODO Récupérer la valeur du jeu sélectionner dans home et remplace le game_id=1 dans la fonction view ci-dessus pas le bon id

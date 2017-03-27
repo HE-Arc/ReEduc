@@ -1,0 +1,24 @@
+{% extends 'templateApp.html' %}
+{% block body %}
+<h3>Account informations</h3>
+<p>First name: {{ actualUser.first_name }} </p>
+<p>Last name: {{ actualUser.last_name }} </p>
+<p>Username: {{ actualUser.username }} </p>
+<p>Email: {{ actualUser.email }} </p>
+<p>Account creation date: {{ actualUser.date_joined }} </p>
+<p>Last login date: {{ actualUser.last_login }} </p>
+<p>Size: {{ actualPlayer.size }}</p>
+<p>Weight: {{ actualPlayer.weight }}</p>
+<p>Gender: {{ actualPlayer.gender }}</p>
+<p>Strong arm: {{ actualPlayer.strong_arm }}</p>
+<p>Birthdate: {{ actualPlayer.birthdate }}</p>
+<p>Specifical id: {{ actualPlayer.spec_id }}</p>
+<p>Phone number: {{ actualPlayer.phone_number }}</p>
+<p>Played games: {{playedGames.count }}</p>
+<p>Best score: {{maxScore}}</p>
+<p>Best time: {{minTime}}</p>
+{% endblock %}
+
+<!-- TODO Mettre en forme les informations, de préférence tout les information propre à l'actual user ensemble
+ tous les information propre au actualPlayer ensemble et les données supplémentaire comme played games, score et temps dans une
+ troisième section -->
