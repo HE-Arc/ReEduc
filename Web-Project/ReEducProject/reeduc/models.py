@@ -17,11 +17,13 @@ class Player(models.Model):
         ('M', 'MALE'),
         ('F', 'FEMALE'),
     )
+    # AUTH_USER_MODEL -> doc
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     size = models.IntegerField()
     weight = models.IntegerField()
     gender = models.CharField(max_length=1,choices=STRONG_ARM_CHOICE)
     strong_arm = models.CharField(max_length=1,choices=GENDER_CHOICE)
+    # jsonb
     handicap = models.CharField(max_length=1000)
     birthdate = models.DateField()
     spec_id = models.CharField(max_length=50)

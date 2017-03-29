@@ -1,22 +1,22 @@
 {% extends 'templateApp.html' %}
 {% block body %}
 <h3>Account informations</h3>
-<p>First name: {{ actualUser.first_name }} </p>
-<p>Last name: {{ actualUser.last_name }} </p>
-<p>Username: {{ actualUser.username }} </p>
-<p>Email: {{ actualUser.email }} </p>
-<p>Account creation date: {{ actualUser.date_joined }} </p>
-<p>Last login date: {{ actualUser.last_login }} </p>
-<p>Size: {{ actualPlayer.size }}</p>
-<p>Weight: {{ actualPlayer.weight }}</p>
-<p>Gender: {{ actualPlayer.gender }}</p>
-<p>Strong arm: {{ actualPlayer.strong_arm }}</p>
-<p>Birthdate: {{ actualPlayer.birthdate }}</p>
-<p>Specifical id: {{ actualPlayer.spec_id }}</p>
-<p>Phone number: {{ actualPlayer.phone_number }}</p>
-<p>Played games: {{playedGames.count }}</p>
-<p>Best score: {{maxScore}}</p>
-<p>Best time: {{minTime}}</p>
+<p>First name: {{ actual_user.first_name }} </p>
+<p>Last name: {{ actual_user.last_name }} </p>
+<p>Username: {{ actual_user.username }} </p>
+<p>Email: {{ actual_user.email }} </p>
+<p>Account creation date: {{ actual_user.date_joined }} </p>
+<p>Last login date: {{ actual_user.last_login }} </p>
+<p>Size: {{ actual_player.size }}</p>
+<p>Weight: {{ actual_player.weight }}</p>
+<p>Gender: {{ actual_player.gender }}</p>
+<p>Strong arm: {{ actual_player.strong_arm }}</p>
+<p>Birthdate: {{ actual_player.birthdate }}</p>
+<p>Specifical id: {{ actual_player.spec_id }}</p>
+<p>Phone number: {{ actual_player.phone_number }}</p>
+<p>Played games: {{played_games.count }}</p>
+<p>Best score: {{max_score}}</p>
+<p>Best time: {{min_time}}</p>
 {% endblock %}
 
 <!-- TODO Mettre en forme les informations, de préférence tout les information propre à l'actual user ensemble
