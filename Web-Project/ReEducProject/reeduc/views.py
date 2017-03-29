@@ -9,13 +9,10 @@ from django.db.models import Max
 from django.db.models import Min
 
 
-#Variable example to pass to the templates
-VarExampleToPassToTemplate = True
-
 #Website authentification pages
 def logout(request):
     auth_logout(request)
-    return render(request, 'login.html', {'var': VarExampleToPassToTemplate})
+    return render(request, 'login.html')
 
 def login(request):
     username = request.POST.get('username')
@@ -23,9 +20,9 @@ def login(request):
     actualUser = authenticate(username=username, password=password)
     if actualUser is not None:
         auth_login(request, actualUser)
-        return render(request, 'home.html', {'var': VarExampleToPassToTemplate})
+        return render(request, 'home.html')
     else:
-        return render(request, 'login.html', {'var': VarExampleToPassToTemplate})
+        return render(request, 'login.html')
 
 def subscribe(request):
 
@@ -60,7 +57,7 @@ def subscribe(request):
     player_rightarm = request.POST.get('rightarm', False)
     player_strongarm=request.POST.get('player_strongarm')
 
-    if user_username is not None: #<----------- Devra être remplacé par une validation de formulaire
+    if user_username is not None: # TODO Devra être remplacé par une validation de formulaire
         if not User.objects.filter(username=user_username).exists():
             if not User.objects.filter(email=user_email).exists():
 
@@ -126,20 +123,20 @@ def subscribe(request):
                            )
                 p.save()
 
-                return render(request, 'login.html', {'var': VarExampleToPassToTemplate})
+                return render(request, 'login.html')
     else:
-        return render(request, 'subscribe.html', {'var': VarExampleToPassToTemplate})
+        return render(request, 'subscribe.html')
 
 
 
 #Website content pages
 def index(request):
-    return render(request, 'index.html', {'var': VarExampleToPassToTemplate})
+    return render(request, 'index.html')
 
 
 @login_required(login_url='/reeduc/login/')
 def home(request):
-    return render(request, 'home.html', {'var': VarExampleToPassToTemplate})
+    return render(request, 'home.html')
 
 # Best decorator ever ->
 @login_required(login_url='/reeduc/login/')
@@ -184,7 +181,7 @@ def view(request):
 
 @login_required(login_url='/reeduc/login/')
 def homeSelected(request):
-    return render(request, 'homeSelected.html', {'connection': VarExampleToPassToTemplate})
+    return render(request, 'homeSelected.html')
 
 @login_required(login_url='/reeduc/login/')
 def account(request):
