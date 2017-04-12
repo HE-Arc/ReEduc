@@ -7,7 +7,7 @@
       "weight": 80,
       "gender": "M",
       "strong_arm": "L",
-      "handicap":"T:T:T:T:T:T:T:T:T:T:F:F",
+      "handicap":"T:T:T:T:T:T:T:T:T:T:F:F",    #TODO-> pas utiliser de T et F mais utiliser JSONB pour django
       "birthdate":"1994-01-03",
       "user_id":7,
       "spec_id":"afjhafoihfj",

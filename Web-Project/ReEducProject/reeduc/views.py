@@ -134,12 +134,12 @@ def index(request):
     return render(request, 'index.html')
 
 
-@login_required(login_url='/reeduc/login/')
+@login_required(login_url='/login/')
 def home(request):
     return render(request, 'home.html')
 
 # Best decorator ever ->
-@login_required(login_url='/reeduc/login/')
+@login_required(login_url='/login/')
 def view(request):
     # Get actual connected user and get corresponding player datas
     actualPlayer=Player.objects.get(user_id=request.user.id)
@@ -179,22 +179,22 @@ def view(request):
     # Step 3: Send the chart object to the template.
     return render(request, 'view.html', {'chart': cht,'playedGames':playedGames})
 
-@login_required(login_url='/reeduc/login/')
+@login_required(login_url='/login/')
 def homeSelected(request):
     return render(request, 'homeSelected.html')
 
-@login_required(login_url='/reeduc/login/')
+@login_required(login_url='/login/')
 def account(request):
-    actualUser= User.objects.get(pk=request.user.id)
-    actualPlayer = Player.objects.get(user_id=request.user.id)
-    playedGames = PlayedGame.objects.filter(player_id=actualPlayer.pk)
-    bestScore=PlayedGame.objects.filter(player_id=actualPlayer.pk).aggregate(Max('score'))
-    maxScore=bestScore.get('score__max')
-    bestTime = PlayedGame.objects.filter(player_id=actualPlayer.pk).aggregate(Min('needed_time'))
-    minTime=bestTime.get('needed_time__min')
-    return render(request, 'account.html', {'actualUser': actualUser,
-                                            'actualPlayer':actualPlayer,
-                                            'playedGames':playedGames,
-                                            'maxScore': maxScore,
-                                            'minTime':minTime})
+    actual_user= User.objects.get(pk=request.user.id)
+    actual_player = Player.objects.get(user_id=request.user.id)
+    played_games = PlayedGame.objects.filter(player_id=actual_player.pk)
+    best_score=PlayedGame.objects.filter(player_id=actual_player.pk).aggregate(Max('score'))
+    max_score=best_score.get('score__max')
+    best_time = PlayedGame.objects.filter(player_id=actual_player.pk).aggregate(Min('needed_time'))
+    min_time=best_time.get('needed_time__min')
+    return render(request, 'account.html', {'actual_user': actual_user,
+                                            'actual_player':actual_player,
+                                            'played_games':played_games,
+                                            'max_score': max_score,
+                                            'min_time':min_time})
 # TODO Récupérer la valeur du jeu sélectionner dans home et remplace le game_id=1 dans la fonction view ci-dessus pas le bon id
