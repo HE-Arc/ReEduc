@@ -9,24 +9,9 @@
       "strong_arm": "L",
       "handicap":"T:T:T:T:T:T:T:T:T:T:F:F",    #TODO-> pas utiliser de T et F mais utiliser JSONB pour django
       "birthdate":"1994-01-03",
-      "user_id":3,
+      "user_id":7,
       "spec_id":"afjhafoihfj",
       "phone_number":"0775142122"
-    }
-  },
-  {
-    "model": "reeduc.Player",
-    "pk": 4,
-    "fields": {
-      "size": 188,
-      "weight": 75,
-      "gender": "M",
-      "strong_arm": "R",
-      "handicap":"T:T:T:T:T:T:T:T:T:T:F:T",
-      "birthdate":"1994-04-18",
-      "user_id":4,
-      "spec_id":"DJKHisahdas",
-      "phone_number":"0786532163"
     }
   }
 ]
