@@ -134,12 +134,12 @@ def index(request):
     return render(request, 'index.html')
 
 
-@login_required(login_url='/reeduc/login/')
+@login_required(login_url='/login/')
 def home(request):
     return render(request, 'home.html')
 
 # Best decorator ever ->
-@login_required(login_url='/reeduc/login/')
+@login_required(login_url='/login/')
 def view(request):
     # Get actual connected user and get corresponding player datas
     actualPlayer=Player.objects.get(user_id=request.user.id)
@@ -179,11 +179,11 @@ def view(request):
     # Step 3: Send the chart object to the template.
     return render(request, 'view.html', {'chart': cht,'playedGames':playedGames})
 
-@login_required(login_url='/reeduc/login/')
+@login_required(login_url='/login/')
 def homeSelected(request):
     return render(request, 'homeSelected.html')
 
-@login_required(login_url='/reeduc/login/')
+@login_required(login_url='/login/')
 def account(request):
     actual_user= User.objects.get(pk=request.user.id)
     actual_player = Player.objects.get(user_id=request.user.id)
