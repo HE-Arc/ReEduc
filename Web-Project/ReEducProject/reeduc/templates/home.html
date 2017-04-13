@@ -1,6 +1,7 @@
 {% extends 'templateApp.html' %}
 {% block body %}
     <div class="row">
+        <a href="{% url 'view' 0 %}">
         <div class="col s5 red">
             <div class="card">
                 <div class="card-image">
@@ -12,8 +13,9 @@
                     <p>Ceci est le premier jeu ainsi que ça description ici présente</p>
                 </div>
             </div>
-        </div>
+        </div></a>
         <div class="col s5 offset-s2 green">
+            <a href="{% url 'view' 1 %}">
             <div class="card">
                 <div class="card-image">
                     {% load static %}
@@ -23,11 +25,12 @@
                 <div class="card-content">
                     <p>Ceci est le second jeu ainsi que ça description ici présente</p>
                 </div>
-            </div>
+            </div></a>
         </div>
     </div>
     <div class="row">
         <div class="col s5 blue">
+            <a href="{% url 'view' 2 %}">
             <div class="card">
                 <div class="card-image">
                     {% load static %}
@@ -37,9 +40,10 @@
                 <div class="card-content">
                     <p>Ceci est le troisième jeu ainsi que ça description ici présente</p>
                 </div>
-            </div>
+            </div></a>
         </div>
         <div class="col s5 offset-s2 yellow">
+            <a href="{% url 'view' 3 %}">
             <div class="card">
                 <div class="card-image">
                     {% load static %}
@@ -50,6 +54,7 @@
                     <p>Ceci est le quatrième jeu ainsi que ça description ici présente</p>
                 </div>
             </div>
+            </a>
         </div>
     </div>
 {% endblock %}
