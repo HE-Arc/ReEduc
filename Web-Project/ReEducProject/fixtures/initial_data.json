@@ -1,0 +1,77 @@
+[
+  {
+    "model": "reeduc.game",
+    "pk": 1,
+    "fields": {
+      "name": "Coordinate Finger",
+      "description": "Using blablablabl"
+    }
+  },
+  {
+    "model": "reeduc.game",
+    "pk": 2,
+    "fields": {
+      "name": "Coordinate Arms",
+      "description": "Using blablablabl"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+      "username": "prouser",
+      "first_name": "",
+      "last_name": "",
+      "is_active": true,
+      "is_superuser":false,
+      "is_staff":true,
+      "last_login":"2017-03-13T10:28:35Z",
+      "groups":[],
+      "user_permissions":[],
+      "password":"prouser1000",
+      "email":"prouser@gmail.com",
+      "date_joined":"2017-03-13T08:28:35Z"
+    }
+  },
+  {
+    "model": "reeduc.player",
+    "pk": 3,
+    "fields": {
+      "user": 6,
+      "size": 200,
+      "weight": 80,
+      "gender": "M",
+      "strong_arm": "L",
+      "handicap": "T:T:T:T:T:T:T:T:T:T:F:F",
+      "birthdate": "1994-01-03",
+      "spec_id": "afjhafoihfj",
+      "phone_number": "0775142122"
+    }
+  },
+  {
+    "model": "reeduc.playedgame",
+    "pk": 3,
+    "fields": {
+      "game": 1,
+      "player": 3,
+      "comments": "Beaucoup d'erreurs ont \u00e9t\u00e9 d\u00e9tect\u00e9es avec l'index et le pouce",
+      "needed_time": 202,
+      "score": 12222,
+      "date": "2005-04-18T17:41:28Z",
+      "errors": 12
+    }
+  },
+  {
+    "model": "reeduc.playedgame",
+    "pk": 4,
+    "fields": {
+      "game": 1,
+      "player": 3,
+      "comments": "Beaucoup d'erreurs ont \u00e9t\u00e9 d\u00e9tect\u00e9es avec l'index",
+      "needed_time": 134,
+      "score": 17000,
+      "date": "1994-04-18T17:41:28Z",
+      "errors": 15
+    }
+  }
+]
