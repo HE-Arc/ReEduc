@@ -1,24 +1,45 @@
 {% extends 'templateApp.html' %}
 {% block body %}
-<h3>Account informations</h3>
-<p>First name: {{ actual_user.first_name }} </p>
-<p>Last name: {{ actual_user.last_name }} </p>
-<p>Username: {{ actual_user.username }} </p>
-<p>Email: {{ actual_user.email }} </p>
-<p>Account creation date: {{ actual_user.date_joined }} </p>
-<p>Last login date: {{ actual_user.last_login }} </p>
-<p>Size: {{ actual_player.size }}</p>
-<p>Weight: {{ actual_player.weight }}</p>
-<p>Gender: {{ actual_player.gender }}</p>
-<p>Strong arm: {{ actual_player.strong_arm }}</p>
-<p>Birthdate: {{ actual_player.birthdate }}</p>
-<p>Specifical id: {{ actual_player.spec_id }}</p>
-<p>Phone number: {{ actual_player.phone_number }}</p>
-<p>Played games: {{played_games.count }}</p>
-<p>Best score: {{max_score}}</p>
-<p>Best time: {{min_time}}</p>
+    <div class="row">
+    <div class="col s10 offset-s1" style="text-align:center">
+        <h3>Account informations</h3>
+    </div>
+    <div class="col s10 offset-s1">
+        <div class="col s5 offset-s3">
+            <p>First name :</p>
+            <p>Last name : </p>
+            <p>Username : </p>
+            <p>Email : </p>
+            <p>Account creation date : </p>
+            <p>Last login date : </p>
+            <p>Size : </p>
+            <p>Weight : </p>
+            <p>Gender : </p>
+            <p>Strong arm : </p>
+            <p>Birthdate : </p>
+            <p>Specifical id : </p>
+            <p>Phone number : </p>
+            <p>Played games : </p>
+            <p>Best score : </p>
+            <p>Best time : </p>
+        </div>
+        <div class="col s4">
+            <p>{{ actual_user.first_name }} </p>
+            <p>{{ actual_user.last_name }} </p>
+            <p>{{ actual_user.username }} </p>
+            <p>{{ actual_user.email }} </p>
+            <p>{{ actual_user.date_joined }} </p>
+            <p>{{ actual_user.last_login }} </p>
+            <p>{{ actual_player.size }} cm</p>
+            <p>{{ actual_player.weight }} kg</p>
+            <p>{{ actual_player.gender }}</p>
+            <p>{{ actual_player.strong_arm }}</p>
+            <p>{{ actual_player.birthdate }}</p>
+            <p>{{ actual_player.spec_id }}</p>
+            <p>{{ actual_player.phone_number}}</p>
+            <p>{{ played_games.count }}</p>
+            <p>{{ max_score }} points</p>
+            <p>{{ min_time }} secondes</p>
+        </div>
+    </div>
 {% endblock %}
-
-<!-- TODO Mettre en forme les informations, de préférence tout les information propre à l'actual user ensemble
- tous les information propre au actualPlayer ensemble et les données supplémentaire comme played games, score et temps dans une
- troisième section -->

@@ -103,10 +103,11 @@ Ou alors rd-vous à: http://www.idreammicro.com/post/django-chartit
 
 
 ///////////////////////////// IMPORTANT////////////////////////////////////
-Nouvelle migration disponible. Pour pouvoir effectuer cette mise à jour sans problème:
-    -   Rendez-vous sur PGAdmin, supprimer les données de la table played_game (pour cela view data et supprimer les données)
-    -   Ensuite rendez-vous dans votre environnement virtuel et exécuter: python manage.py migrate
-    -   Pour finir exécuter la commande: python manage.py loaddata ./fixtures/initial_data.json
+supprimer la bdd présente (dbPostgres)
+faire un
+python manage.py migrate
+puis pour le peuplement :
+python manage.py loaddata ./fixtures/initial_data.json
 
 
 Utilisation de la partie Login de l'application. Pour pouvoir utiliser le login de l'appliation il faut créer un superuser:
