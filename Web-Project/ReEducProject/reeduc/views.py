@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 from django.utils.crypto import get_random_string
 from django.db.models import Max
 from django.db.models import Min
+from django.http import HttpResponse
 
 
 # Website authentification pages
@@ -123,7 +124,6 @@ def subscribe(request):
                            phone_number=player_phone,
                            )
                 p.save()
-
                 return render(request, 'login.html')
     else:
         return render(request, 'subscribe.html')
