@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 from django.utils.crypto import get_random_string
 from django.db.models import Max
 from django.db.models import Min
+from django.http import HttpResponse
 
 
 # Website authentification pages
@@ -123,7 +124,6 @@ def subscribe(request):
                            phone_number=player_phone,
                            )
                 p.save()
-
                 return render(request, 'login.html')
     else:
         return render(request, 'subscribe.html')
@@ -134,16 +134,16 @@ def index(request):
     return render(request, 'index.html')
 
 
-#@login_required
+@login_required
 def home(request):
     return render(request, 'home.html')
 
 
 # Best decorator ever ->
-#@login_required
+@login_required
 def view(request):
     # Get all played games by this user
-    playedGames = PlayedGame.objects.filter(player_id=request.user, game_id=1)
+    playedGames = PlayedGame.objects.filter(player_id=request.user.id, game_id=0)
     # Step 1: Create a DataPool with the data we want to retrieve.
     datas = \
         DataPool(
@@ -179,7 +179,7 @@ def view(request):
     return render(request, 'view.html', {'chart': cht, 'playedGames': playedGames})
 
 
-#@login_required
+@login_required
 def homeSelected(request):
     return render(request, 'homeSelected.html')
 
