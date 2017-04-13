@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="row">
-            <form class="subscribe-form" action='/reeduc/subscribe/' method='post'> {% csrf_token %}
+            <form class="subscribe-form" action=href="{% url 'subscribe' %}" method='post'> {% csrf_token %}
                 <div class="row">
                     <div class="col s6">
                         <div class="row">

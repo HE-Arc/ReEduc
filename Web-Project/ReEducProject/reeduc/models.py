@@ -32,11 +32,11 @@ class Player(models.Model):
     phone_number = models.CharField(validators=[phone_regex], blank=True,max_length=15)
 
 class PlayedGame(models.Model):
-    game= models.ForeignKey(Game, on_delete=models.CASCADE)
+    game = models.ForeignKey(Game, on_delete=models.CASCADE)
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
     comments = models.CharField(max_length=1000)
     needed_time = models.IntegerField()
     score = models.IntegerField()
-    date = models.DateTimeField(default=datetime.now(),blank=True)
+    date = models.DateTimeField(default=datetime.now(), blank=True)
     errors = models.IntegerField()
 

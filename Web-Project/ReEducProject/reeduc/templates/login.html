@@ -6,7 +6,7 @@
 <div id="login-page" class="valign-wrapper">
 
     <div class="col s6 z-depth-4 card-panel valign">
-        <form class="login-form" action='/reeduc/login/' method='post' >  {% csrf_token %}
+        <form class="login-form" action="{% url 'login' %}" method='post' >  {% csrf_token %}
             <div class="row">
                 <div class="input-field col s12 center">
                     <h1>ReEduc</h1>

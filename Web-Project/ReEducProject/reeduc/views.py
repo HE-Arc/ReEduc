@@ -134,18 +134,16 @@ def index(request):
     return render(request, 'index.html')
 
 
-@login_required
+#@login_required
 def home(request):
     return render(request, 'home.html')
 
 
 # Best decorator ever ->
-@login_required
+#@login_required
 def view(request):
-    # Get actual connected user and get corresponding player datas
-    actualPlayer = Player.objects.get(user_id=request.user.id)
     # Get all played games by this user
-    playedGames = PlayedGame.objects.filter(player_id=actualPlayer, game_id=1)
+    playedGames = PlayedGame.objects.filter(player_id=request.user, game_id=1)
     # Step 1: Create a DataPool with the data we want to retrieve.
     datas = \
         DataPool(
@@ -181,7 +179,7 @@ def view(request):
     return render(request, 'view.html', {'chart': cht, 'playedGames': playedGames})
 
 
-@login_required
+#@login_required
 def homeSelected(request):
     return render(request, 'homeSelected.html')
 

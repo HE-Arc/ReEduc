@@ -11,3 +11,4 @@ urlpatterns = [
     url(r'^account', views.account, name="account"),
     url(r'^view', views.view, name="view"),
 ]
+
