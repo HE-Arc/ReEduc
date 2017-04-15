@@ -44,7 +44,7 @@
    "last_login": "2017-03-13T10:28:35Z",
    "groups": [],
    "user_permissions": [],
-   "password": "pbkdf2_sha256$30000$AGAfnib55aPO$POtqXIM227YNc5tlBoQ2/cCmm9K0jXBS9tUczfaOvxc=",
+   "password": "pbkdf2_sha256$30000$0cyM5L5fiEBJ$UYs/ImX/lZVnqTxc49QAX33XbcWqrQx1iETUpjfQy/M=",
    "email": "cyrilmanuel@gmail.com",
    "date_joined": "2017-03-13T08:28:35Z"
   }
@@ -62,7 +62,7 @@
    "last_login": "2017-03-13T10:28:35Z",
    "groups": [],
    "user_permissions": [],
-   "password": "pbkdf2_sha256$30000$4lEoKSFR83bg$EJpqDy4oAI5RX5tlRpBfVI0ajKKU8Ar7m4QdVU+cpjM=",
+   "password": "pbkdf2_sha256$30000$GFeBUxNTdwZ7$ymCYFP1tJ7XNb+KtRs5V0V8KSjc+WJ+yA/p0j6vUtX8=",
    "email": "user1@gmail.com",
    "date_joined": "2017-03-13T08:28:35Z"
   }
@@ -80,7 +80,7 @@
    "last_login": "2017-03-13T10:28:35Z",
    "groups": [],
    "user_permissions": [],
-   "password": "pbkdf2_sha256$30000$qULhysXe5PoT$K/xJLwOX6Gc2WaTylu+R79ANDcK4VP2AO5XlinBsbkU=",
+   "password": "pbkdf2_sha256$30000$h84EeSMydNJL$fmlAQcCC1UPwzjmAD2fd5Yzz5OF5EcQq2vOV7S6Sjyc=",
    "email": "user2@gmail.com",
    "date_joined": "2017-03-13T08:28:35Z"
   }
@@ -98,7 +98,7 @@
    "last_login": "2017-03-13T10:28:35Z",
    "groups": [],
    "user_permissions": [],
-   "password": "pbkdf2_sha256$30000$BvltsI7LdMbB$l1H4DSf8j4Zto9jdBCK4yVLhVyJW8NK+3guVK29Nc0Y=",
+   "password": "pbkdf2_sha256$30000$YEFod6b9yP8Z$S+oVJcsLHSTF+cxm4gZyYQUi0471CvbFi3tJB3xg2KI=",
    "email": "user3@gmail.com",
    "date_joined": "2017-03-13T08:28:35Z"
   }
@@ -107,12 +107,12 @@
   "model": "reeduc.Player",
   "pk": 0,
   "fields": {
-   "size": 168,
+   "size": 200,
    "weight": 70,
    "gender": "M",
    "strong_arm": "L",
    "handicap": "T:T:T:T:T:T:T:T:T:T:F:F",
-   "birthdate": "2000-05-02",
+   "birthdate": "1999-11-25",
    "user_id": 0,
    "spec_id": "testee0",
    "phone_number": "0775142122"
@@ -122,12 +122,12 @@
   "model": "reeduc.Player",
   "pk": 1,
   "fields": {
-   "size": 201,
-   "weight": 91,
+   "size": 204,
+   "weight": 84,
    "gender": "M",
    "strong_arm": "L",
    "handicap": "T:T:T:T:T:T:T:T:T:T:F:F",
-   "birthdate": "1993-07-25",
+   "birthdate": "2010-09-25",
    "user_id": 1,
    "spec_id": "testee1",
    "phone_number": "0775142122"
@@ -137,12 +137,12 @@
   "model": "reeduc.Player",
   "pk": 2,
   "fields": {
-   "size": 187,
-   "weight": 75,
+   "size": 156,
+   "weight": 104,
    "gender": "M",
    "strong_arm": "L",
    "handicap": "T:T:T:T:T:T:T:T:T:T:F:F",
-   "birthdate": "2007-12-19",
+   "birthdate": "2006-03-18",
    "user_id": 2,
    "spec_id": "testee2",
    "phone_number": "0775142122"
@@ -152,12 +152,12 @@
   "model": "reeduc.Player",
   "pk": 3,
   "fields": {
-   "size": 191,
-   "weight": 70,
+   "size": 184,
+   "weight": 73,
    "gender": "M",
    "strong_arm": "L",
    "handicap": "T:T:T:T:T:T:T:T:T:T:F:F",
-   "birthdate": "1996-12-15",
+   "birthdate": "2005-10-22",
    "user_id": 3,
    "spec_id": "testee3",
    "phone_number": "0775142122"
@@ -167,39 +167,39 @@
   "model": "reeduc.playedgame",
   "pk": 0,
   "fields": {
-   "game": 3,
-   "player": 0,
+   "game": 0,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 118,
-   "score": 389,
-   "date": "1995-02-25T17:41:28+00:00",
-   "errors": 20
+   "needed_time": 126,
+   "score": 57,
+   "date": "1992-01-20T17:41:28+00:00",
+   "errors": 7
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 1,
   "fields": {
-   "game": 0,
-   "player": 0,
+   "game": 2,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 180,
-   "score": 2834,
-   "date": "2010-08-03T17:41:28+00:00",
-   "errors": 14
+   "needed_time": 144,
+   "score": 15,
+   "date": "1996-08-11T17:41:28+00:00",
+   "errors": 10
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 2,
   "fields": {
-   "game": 3,
+   "game": 1,
    "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 183,
-   "score": 157,
-   "date": "2002-03-07T17:41:28+00:00",
-   "errors": 5
+   "needed_time": 147,
+   "score": 1892,
+   "date": "1997-08-09T17:41:28+00:00",
+   "errors": 20
   }
  },
  {
@@ -207,24 +207,24 @@
   "pk": 3,
   "fields": {
    "game": 2,
-   "player": 2,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 141,
-   "score": 2237,
-   "date": "2000-12-08T17:41:28+00:00",
-   "errors": 8
+   "needed_time": 186,
+   "score": 114,
+   "date": "2010-04-04T17:41:28+00:00",
+   "errors": 3
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 4,
   "fields": {
-   "game": 3,
+   "game": 2,
    "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 132,
-   "score": 1199,
-   "date": "1997-03-13T17:41:28+00:00",
+   "needed_time": 193,
+   "score": 656,
+   "date": "2004-01-05T17:41:28+00:00",
    "errors": 16
   }
  },
@@ -232,65 +232,65 @@
   "model": "reeduc.playedgame",
   "pk": 5,
   "fields": {
-   "game": 3,
-   "player": 0,
+   "game": 0,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 170,
-   "score": 2442,
-   "date": "2001-10-09T17:41:28+00:00",
-   "errors": 20
+   "needed_time": 129,
+   "score": 887,
+   "date": "2007-11-04T17:41:28+00:00",
+   "errors": 2
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 6,
   "fields": {
-   "game": 3,
-   "player": 3,
+   "game": 1,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 174,
-   "score": 2478,
-   "date": "1992-09-16T17:41:28+00:00",
-   "errors": 7
+   "needed_time": 144,
+   "score": 2827,
+   "date": "1998-12-19T17:41:28+00:00",
+   "errors": 4
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 7,
   "fields": {
-   "game": 1,
-   "player": 3,
+   "game": 3,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 166,
-   "score": 1402,
-   "date": "1993-04-20T17:41:28+00:00",
-   "errors": 13
+   "needed_time": 180,
+   "score": 781,
+   "date": "2001-06-04T17:41:28+00:00",
+   "errors": 4
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 8,
   "fields": {
-   "game": 2,
-   "player": 2,
+   "game": 0,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 131,
-   "score": 1804,
-   "date": "2000-08-14T17:41:28+00:00",
-   "errors": 2
+   "needed_time": 154,
+   "score": 507,
+   "date": "2010-06-09T17:41:28+00:00",
+   "errors": 10
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 9,
   "fields": {
-   "game": 1,
-   "player": 2,
+   "game": 2,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 185,
-   "score": 1973,
-   "date": "2001-12-11T17:41:28+00:00",
-   "errors": 2
+   "needed_time": 113,
+   "score": 422,
+   "date": "1997-02-25T17:41:28+00:00",
+   "errors": 8
   }
  },
  {
@@ -298,51 +298,51 @@
   "pk": 10,
   "fields": {
    "game": 0,
-   "player": 1,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 181,
-   "score": 1319,
-   "date": "1996-10-10T17:41:28+00:00",
-   "errors": 2
+   "needed_time": 132,
+   "score": 875,
+   "date": "1991-07-09T17:41:28+00:00",
+   "errors": 0
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 11,
   "fields": {
-   "game": 2,
-   "player": 0,
+   "game": 1,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 139,
-   "score": 405,
-   "date": "1994-04-18T17:41:28+00:00",
-   "errors": 12
+   "needed_time": 130,
+   "score": 2240,
+   "date": "1993-10-17T17:41:28+00:00",
+   "errors": 6
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 12,
   "fields": {
-   "game": 2,
-   "player": 2,
+   "game": 0,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 173,
-   "score": 323,
-   "date": "1992-03-11T17:41:28+00:00",
-   "errors": 20
+   "needed_time": 190,
+   "score": 2548,
+   "date": "1995-10-24T17:41:28+00:00",
+   "errors": 16
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 13,
   "fields": {
-   "game": 3,
+   "game": 0,
    "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 100,
-   "score": 2058,
-   "date": "1990-02-12T17:41:28+00:00",
-   "errors": 2
+   "needed_time": 148,
+   "score": 2751,
+   "date": "2001-11-22T17:41:28+00:00",
+   "errors": 16
   }
  },
  {
@@ -352,36 +352,36 @@
    "game": 0,
    "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 177,
-   "score": 1241,
-   "date": "2005-10-13T17:41:28+00:00",
-   "errors": 14
+   "needed_time": 117,
+   "score": 1424,
+   "date": "2010-01-06T17:41:28+00:00",
+   "errors": 8
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 15,
   "fields": {
-   "game": 0,
+   "game": 1,
    "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 180,
-   "score": 81,
-   "date": "2004-01-07T17:41:28+00:00",
-   "errors": 12
+   "needed_time": 169,
+   "score": 476,
+   "date": "1998-08-24T17:41:28+00:00",
+   "errors": 13
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 16,
   "fields": {
-   "game": 0,
-   "player": 3,
+   "game": 3,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 191,
-   "score": 2695,
-   "date": "2010-09-03T17:41:28+00:00",
-   "errors": 20
+   "needed_time": 176,
+   "score": 1621,
+   "date": "2001-11-13T17:41:28+00:00",
+   "errors": 10
   }
  },
  {
@@ -389,38 +389,38 @@
   "pk": 17,
   "fields": {
    "game": 3,
-   "player": 2,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 182,
-   "score": 2241,
-   "date": "1991-03-15T17:41:28+00:00",
-   "errors": 17
+   "needed_time": 154,
+   "score": 1868,
+   "date": "1995-04-08T17:41:28+00:00",
+   "errors": 11
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 18,
   "fields": {
-   "game": 3,
-   "player": 3,
+   "game": 1,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 189,
-   "score": 2761,
-   "date": "2005-05-13T17:41:28+00:00",
-   "errors": 16
+   "needed_time": 119,
+   "score": 2172,
+   "date": "1992-07-07T17:41:28+00:00",
+   "errors": 20
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 19,
   "fields": {
-   "game": 0,
+   "game": 2,
    "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 143,
-   "score": 1266,
-   "date": "1996-02-07T17:41:28+00:00",
-   "errors": 14
+   "needed_time": 172,
+   "score": 1113,
+   "date": "1997-11-09T17:41:28+00:00",
+   "errors": 4
   }
  },
  {
@@ -428,12 +428,12 @@
   "pk": 20,
   "fields": {
    "game": 1,
-   "player": 1,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 100,
-   "score": 913,
-   "date": "1991-08-19T17:41:28+00:00",
-   "errors": 0
+   "needed_time": 175,
+   "score": 181,
+   "date": "1991-09-14T17:41:28+00:00",
+   "errors": 16
   }
  },
  {
@@ -441,77 +441,77 @@
   "pk": 21,
   "fields": {
    "game": 1,
-   "player": 0,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 175,
-   "score": 1258,
-   "date": "1994-07-07T17:41:28+00:00",
-   "errors": 18
+   "needed_time": 173,
+   "score": 2421,
+   "date": "2010-06-21T17:41:28+00:00",
+   "errors": 13
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 22,
   "fields": {
-   "game": 3,
-   "player": 2,
+   "game": 2,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 197,
-   "score": 966,
-   "date": "1994-03-16T17:41:28+00:00",
-   "errors": 9
+   "needed_time": 154,
+   "score": 962,
+   "date": "2010-01-04T17:41:28+00:00",
+   "errors": 14
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 23,
   "fields": {
-   "game": 2,
-   "player": 2,
+   "game": 1,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 160,
-   "score": 980,
-   "date": "2010-05-02T17:41:28+00:00",
-   "errors": 2
+   "needed_time": 150,
+   "score": 2128,
+   "date": "1992-06-05T17:41:28+00:00",
+   "errors": 7
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 24,
   "fields": {
-   "game": 2,
-   "player": 1,
+   "game": 0,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 102,
-   "score": 2555,
-   "date": "2010-08-23T17:41:28+00:00",
-   "errors": 19
+   "needed_time": 178,
+   "score": 1580,
+   "date": "2000-08-15T17:41:28+00:00",
+   "errors": 14
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 25,
   "fields": {
-   "game": 2,
-   "player": 3,
+   "game": 0,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 106,
-   "score": 1557,
-   "date": "2004-12-12T17:41:28+00:00",
-   "errors": 14
+   "needed_time": 112,
+   "score": 2860,
+   "date": "1992-03-20T17:41:28+00:00",
+   "errors": 3
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 26,
   "fields": {
-   "game": 0,
-   "player": 3,
+   "game": 2,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 166,
-   "score": 128,
-   "date": "1999-11-18T17:41:28+00:00",
-   "errors": 1
+   "needed_time": 195,
+   "score": 563,
+   "date": "2004-07-03T17:41:28+00:00",
+   "errors": 6
   }
  },
  {
@@ -519,38 +519,38 @@
   "pk": 27,
   "fields": {
    "game": 0,
-   "player": 3,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 194,
-   "score": 151,
-   "date": "1992-02-06T17:41:28+00:00",
-   "errors": 12
+   "needed_time": 168,
+   "score": 2810,
+   "date": "1996-09-02T17:41:28+00:00",
+   "errors": 17
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 28,
   "fields": {
-   "game": 0,
-   "player": 3,
+   "game": 3,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 132,
-   "score": 170,
-   "date": "2003-01-01T17:41:28+00:00",
-   "errors": 1
+   "needed_time": 139,
+   "score": 2055,
+   "date": "1995-05-24T17:41:28+00:00",
+   "errors": 6
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 29,
   "fields": {
-   "game": 1,
-   "player": 1,
+   "game": 3,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 114,
-   "score": 1418,
-   "date": "2010-03-21T17:41:28+00:00",
-   "errors": 12
+   "needed_time": 127,
+   "score": 1875,
+   "date": "1999-09-08T17:41:28+00:00",
+   "errors": 11
   }
  },
  {
@@ -558,64 +558,64 @@
   "pk": 30,
   "fields": {
    "game": 2,
-   "player": 1,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 135,
-   "score": 1122,
-   "date": "1997-01-18T17:41:28+00:00",
-   "errors": 12
+   "needed_time": 143,
+   "score": 574,
+   "date": "2000-06-10T17:41:28+00:00",
+   "errors": 19
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 31,
   "fields": {
-   "game": 2,
+   "game": 0,
    "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 128,
-   "score": 2962,
-   "date": "1999-06-01T17:41:28+00:00",
-   "errors": 6
+   "needed_time": 134,
+   "score": 2585,
+   "date": "1997-07-07T17:41:28+00:00",
+   "errors": 19
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 32,
   "fields": {
-   "game": 3,
+   "game": 2,
    "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 135,
-   "score": 934,
-   "date": "2008-11-20T17:41:28+00:00",
-   "errors": 19
+   "needed_time": 130,
+   "score": 84,
+   "date": "2005-07-14T17:41:28+00:00",
+   "errors": 15
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 33,
   "fields": {
-   "game": 0,
+   "game": 3,
    "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 146,
-   "score": 655,
-   "date": "2003-06-03T17:41:28+00:00",
-   "errors": 7
+   "needed_time": 112,
+   "score": 2257,
+   "date": "1991-06-05T17:41:28+00:00",
+   "errors": 18
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 34,
   "fields": {
-   "game": 0,
-   "player": 1,
+   "game": 2,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 126,
-   "score": 1781,
-   "date": "1994-07-17T17:41:28+00:00",
-   "errors": 9
+   "needed_time": 151,
+   "score": 893,
+   "date": "2003-06-15T17:41:28+00:00",
+   "errors": 10
   }
  },
  {
@@ -623,63 +623,63 @@
   "pk": 35,
   "fields": {
    "game": 1,
-   "player": 2,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 156,
-   "score": 419,
-   "date": "1998-12-19T17:41:28+00:00",
-   "errors": 13
+   "needed_time": 176,
+   "score": 2971,
+   "date": "2006-07-09T17:41:28+00:00",
+   "errors": 19
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 36,
   "fields": {
-   "game": 2,
-   "player": 2,
+   "game": 0,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 162,
-   "score": 481,
-   "date": "1993-06-07T17:41:28+00:00",
-   "errors": 6
+   "needed_time": 141,
+   "score": 2102,
+   "date": "2001-06-13T17:41:28+00:00",
+   "errors": 15
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 37,
   "fields": {
-   "game": 0,
-   "player": 1,
+   "game": 2,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 141,
-   "score": 2437,
-   "date": "2001-11-01T17:41:28+00:00",
-   "errors": 9
+   "needed_time": 185,
+   "score": 495,
+   "date": "2010-01-09T17:41:28+00:00",
+   "errors": 6
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 38,
   "fields": {
-   "game": 0,
+   "game": 3,
    "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 118,
-   "score": 1750,
-   "date": "1993-08-15T17:41:28+00:00",
-   "errors": 15
+   "needed_time": 142,
+   "score": 297,
+   "date": "1995-10-06T17:41:28+00:00",
+   "errors": 0
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 39,
   "fields": {
-   "game": 2,
-   "player": 2,
+   "game": 3,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 171,
-   "score": 2657,
-   "date": "2002-09-18T17:41:28+00:00",
+   "needed_time": 135,
+   "score": 2937,
+   "date": "2006-01-08T17:41:28+00:00",
    "errors": 9
   }
  },
@@ -687,52 +687,52 @@
   "model": "reeduc.playedgame",
   "pk": 40,
   "fields": {
-   "game": 3,
-   "player": 1,
+   "game": 2,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 132,
-   "score": 2432,
-   "date": "1993-02-19T17:41:28+00:00",
-   "errors": 1
+   "needed_time": 110,
+   "score": 2442,
+   "date": "2000-11-06T17:41:28+00:00",
+   "errors": 18
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 41,
   "fields": {
-   "game": 3,
-   "player": 3,
+   "game": 0,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 114,
-   "score": 469,
-   "date": "2009-03-17T17:41:28+00:00",
-   "errors": 4
+   "needed_time": 134,
+   "score": 968,
+   "date": "2004-02-22T17:41:28+00:00",
+   "errors": 7
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 42,
   "fields": {
-   "game": 0,
-   "player": 2,
+   "game": 1,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 200,
-   "score": 2688,
-   "date": "2005-07-12T17:41:28+00:00",
-   "errors": 14
+   "needed_time": 111,
+   "score": 836,
+   "date": "2006-01-22T17:41:28+00:00",
+   "errors": 13
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 43,
   "fields": {
-   "game": 0,
+   "game": 3,
    "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 160,
-   "score": 2425,
-   "date": "2000-10-10T17:41:28+00:00",
-   "errors": 1
+   "needed_time": 183,
+   "score": 1967,
+   "date": "2003-12-16T17:41:28+00:00",
+   "errors": 16
   }
  },
  {
@@ -740,12 +740,12 @@
   "pk": 44,
   "fields": {
    "game": 2,
-   "player": 2,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 191,
-   "score": 2224,
-   "date": "2001-07-23T17:41:28+00:00",
-   "errors": 0
+   "needed_time": 159,
+   "score": 1554,
+   "date": "1999-01-17T17:41:28+00:00",
+   "errors": 7
   }
  },
  {
@@ -753,168 +753,168 @@
   "pk": 45,
   "fields": {
    "game": 2,
-   "player": 0,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 155,
-   "score": 2603,
-   "date": "2005-09-23T17:41:28+00:00",
-   "errors": 7
+   "needed_time": 108,
+   "score": 2836,
+   "date": "2010-01-08T17:41:28+00:00",
+   "errors": 19
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 46,
   "fields": {
-   "game": 2,
+   "game": 3,
    "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 189,
-   "score": 1590,
-   "date": "2009-08-16T17:41:28+00:00",
-   "errors": 19
+   "needed_time": 176,
+   "score": 2380,
+   "date": "2005-11-20T17:41:28+00:00",
+   "errors": 13
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 47,
   "fields": {
-   "game": 1,
-   "player": 0,
+   "game": 0,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 139,
-   "score": 863,
-   "date": "1993-11-17T17:41:28+00:00",
-   "errors": 4
+   "needed_time": 161,
+   "score": 987,
+   "date": "1991-05-13T17:41:28+00:00",
+   "errors": 14
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 48,
   "fields": {
-   "game": 2,
-   "player": 2,
+   "game": 1,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 121,
-   "score": 2197,
-   "date": "1992-09-01T17:41:28+00:00",
-   "errors": 18
+   "needed_time": 113,
+   "score": 2285,
+   "date": "1992-02-21T17:41:28+00:00",
+   "errors": 6
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 49,
   "fields": {
-   "game": 2,
+   "game": 0,
    "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 128,
-   "score": 2420,
-   "date": "2009-12-09T17:41:28+00:00",
-   "errors": 18
+   "needed_time": 189,
+   "score": 1876,
+   "date": "1996-02-15T17:41:28+00:00",
+   "errors": 13
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 50,
   "fields": {
-   "game": 2,
-   "player": 0,
+   "game": 1,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 191,
-   "score": 2890,
-   "date": "2009-11-18T17:41:28+00:00",
-   "errors": 9
+   "needed_time": 184,
+   "score": 915,
+   "date": "1995-02-21T17:41:28+00:00",
+   "errors": 18
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 51,
   "fields": {
-   "game": 3,
-   "player": 3,
+   "game": 0,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 139,
-   "score": 2929,
-   "date": "1997-08-13T17:41:28+00:00",
-   "errors": 1
+   "needed_time": 155,
+   "score": 1310,
+   "date": "2004-05-04T17:41:28+00:00",
+   "errors": 3
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 52,
   "fields": {
-   "game": 1,
-   "player": 0,
+   "game": 2,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 117,
-   "score": 44,
-   "date": "1996-09-07T17:41:28+00:00",
-   "errors": 3
+   "needed_time": 143,
+   "score": 695,
+   "date": "2003-12-05T17:41:28+00:00",
+   "errors": 2
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 53,
   "fields": {
-   "game": 0,
-   "player": 3,
+   "game": 1,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 166,
-   "score": 487,
-   "date": "1993-05-03T17:41:28+00:00",
-   "errors": 3
+   "needed_time": 149,
+   "score": 2422,
+   "date": "1998-03-24T17:41:28+00:00",
+   "errors": 6
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 54,
   "fields": {
-   "game": 1,
+   "game": 3,
    "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 164,
-   "score": 2362,
-   "date": "1991-02-18T17:41:28+00:00",
-   "errors": 0
+   "needed_time": 147,
+   "score": 2993,
+   "date": "1999-03-05T17:41:28+00:00",
+   "errors": 20
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 55,
   "fields": {
-   "game": 1,
-   "player": 0,
+   "game": 2,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 114,
-   "score": 13,
-   "date": "1999-08-14T17:41:28+00:00",
-   "errors": 14
+   "needed_time": 198,
+   "score": 1243,
+   "date": "1997-07-09T17:41:28+00:00",
+   "errors": 7
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 56,
   "fields": {
-   "game": 3,
-   "player": 3,
+   "game": 2,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 191,
-   "score": 488,
-   "date": "1993-05-23T17:41:28+00:00",
-   "errors": 1
+   "needed_time": 128,
+   "score": 437,
+   "date": "2004-01-24T17:41:28+00:00",
+   "errors": 10
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 57,
   "fields": {
-   "game": 2,
-   "player": 2,
+   "game": 1,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 186,
-   "score": 1187,
-   "date": "2010-08-07T17:41:28+00:00",
-   "errors": 20
+   "needed_time": 138,
+   "score": 1057,
+   "date": "1990-04-06T17:41:28+00:00",
+   "errors": 7
   }
  },
  {
@@ -922,12 +922,12 @@
   "pk": 58,
   "fields": {
    "game": 1,
-   "player": 3,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 109,
-   "score": 2847,
-   "date": "2009-03-18T17:41:28+00:00",
-   "errors": 13
+   "needed_time": 137,
+   "score": 1330,
+   "date": "2000-12-25T17:41:28+00:00",
+   "errors": 12
   }
  },
  {
@@ -937,88 +937,88 @@
    "game": 1,
    "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 176,
-   "score": 2589,
-   "date": "2001-06-09T17:41:28+00:00",
-   "errors": 17
+   "needed_time": 156,
+   "score": 2071,
+   "date": "1999-05-21T17:41:28+00:00",
+   "errors": 14
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 60,
   "fields": {
-   "game": 1,
-   "player": 1,
+   "game": 0,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 165,
-   "score": 688,
-   "date": "1996-02-21T17:41:28+00:00",
-   "errors": 19
+   "needed_time": 172,
+   "score": 1932,
+   "date": "2007-05-03T17:41:28+00:00",
+   "errors": 7
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 61,
   "fields": {
-   "game": 2,
-   "player": 0,
+   "game": 3,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 158,
-   "score": 1457,
-   "date": "1998-10-02T17:41:28+00:00",
-   "errors": 9
+   "needed_time": 160,
+   "score": 2435,
+   "date": "2008-05-05T17:41:28+00:00",
+   "errors": 12
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 62,
   "fields": {
-   "game": 3,
+   "game": 1,
    "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 194,
-   "score": 1241,
-   "date": "2005-11-25T17:41:28+00:00",
-   "errors": 7
+   "needed_time": 113,
+   "score": 1522,
+   "date": "2003-09-08T17:41:28+00:00",
+   "errors": 1
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 63,
   "fields": {
-   "game": 1,
+   "game": 0,
    "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 158,
-   "score": 1384,
-   "date": "1995-05-16T17:41:28+00:00",
-   "errors": 10
+   "needed_time": 114,
+   "score": 2458,
+   "date": "1997-05-21T17:41:28+00:00",
+   "errors": 1
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 64,
   "fields": {
-   "game": 0,
-   "player": 0,
+   "game": 3,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 129,
-   "score": 835,
-   "date": "2008-02-11T17:41:28+00:00",
-   "errors": 0
+   "needed_time": 125,
+   "score": 471,
+   "date": "1994-03-21T17:41:28+00:00",
+   "errors": 5
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 65,
   "fields": {
-   "game": 1,
-   "player": 2,
+   "game": 0,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 198,
-   "score": 279,
-   "date": "2005-03-23T17:41:28+00:00",
-   "errors": 19
+   "needed_time": 132,
+   "score": 771,
+   "date": "2007-10-16T17:41:28+00:00",
+   "errors": 8
   }
  },
  {
@@ -1028,10 +1028,10 @@
    "game": 2,
    "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 133,
-   "score": 239,
-   "date": "2003-09-23T17:41:28+00:00",
-   "errors": 8
+   "needed_time": 116,
+   "score": 921,
+   "date": "2003-11-20T17:41:28+00:00",
+   "errors": 10
   }
  },
  {
@@ -1041,35 +1041,35 @@
    "game": 2,
    "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 135,
-   "score": 2173,
-   "date": "2003-01-05T17:41:28+00:00",
-   "errors": 8
+   "needed_time": 139,
+   "score": 755,
+   "date": "2003-07-03T17:41:28+00:00",
+   "errors": 12
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 68,
   "fields": {
-   "game": 2,
+   "game": 1,
    "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 191,
-   "score": 2547,
-   "date": "2008-11-01T17:41:28+00:00",
-   "errors": 15
+   "needed_time": 199,
+   "score": 831,
+   "date": "2005-11-21T17:41:28+00:00",
+   "errors": 20
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 69,
   "fields": {
-   "game": 3,
+   "game": 0,
    "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 156,
-   "score": 1129,
-   "date": "2008-05-03T17:41:28+00:00",
+   "needed_time": 193,
+   "score": 2153,
+   "date": "1998-12-01T17:41:28+00:00",
    "errors": 12
   }
  },
@@ -1077,12 +1077,12 @@
   "model": "reeduc.playedgame",
   "pk": 70,
   "fields": {
-   "game": 3,
-   "player": 2,
+   "game": 0,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 102,
-   "score": 1566,
-   "date": "2001-11-09T17:41:28+00:00",
+   "needed_time": 184,
+   "score": 672,
+   "date": "1995-12-08T17:41:28+00:00",
    "errors": 1
   }
  },
@@ -1090,117 +1090,117 @@
   "model": "reeduc.playedgame",
   "pk": 71,
   "fields": {
-   "game": 2,
+   "game": 3,
    "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 127,
-   "score": 1666,
-   "date": "1999-01-18T17:41:28+00:00",
-   "errors": 18
+   "needed_time": 133,
+   "score": 713,
+   "date": "2003-02-08T17:41:28+00:00",
+   "errors": 19
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 72,
   "fields": {
-   "game": 2,
+   "game": 0,
    "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 119,
-   "score": 947,
-   "date": "2009-04-12T17:41:28+00:00",
-   "errors": 17
+   "needed_time": 146,
+   "score": 252,
+   "date": "1996-08-18T17:41:28+00:00",
+   "errors": 4
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 73,
   "fields": {
-   "game": 1,
-   "player": 2,
+   "game": 3,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 163,
-   "score": 2400,
-   "date": "1992-08-20T17:41:28+00:00",
-   "errors": 4
+   "needed_time": 162,
+   "score": 958,
+   "date": "1990-07-06T17:41:28+00:00",
+   "errors": 5
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 74,
   "fields": {
-   "game": 1,
-   "player": 1,
+   "game": 2,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 119,
-   "score": 1956,
-   "date": "1995-05-01T17:41:28+00:00",
-   "errors": 5
+   "needed_time": 133,
+   "score": 2917,
+   "date": "2007-04-12T17:41:28+00:00",
+   "errors": 3
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 75,
   "fields": {
-   "game": 3,
-   "player": 2,
+   "game": 1,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 113,
-   "score": 442,
-   "date": "1995-11-09T17:41:28+00:00",
-   "errors": 11
+   "needed_time": 189,
+   "score": 2598,
+   "date": "1994-02-17T17:41:28+00:00",
+   "errors": 15
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 76,
   "fields": {
-   "game": 2,
+   "game": 3,
    "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 115,
-   "score": 2490,
-   "date": "1997-11-05T17:41:28+00:00",
-   "errors": 16
+   "needed_time": 146,
+   "score": 2117,
+   "date": "1990-08-08T17:41:28+00:00",
+   "errors": 18
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 77,
   "fields": {
-   "game": 3,
-   "player": 2,
+   "game": 0,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 159,
-   "score": 495,
-   "date": "1997-08-24T17:41:28+00:00",
-   "errors": 7
+   "needed_time": 142,
+   "score": 1602,
+   "date": "1996-12-19T17:41:28+00:00",
+   "errors": 3
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 78,
   "fields": {
-   "game": 1,
+   "game": 0,
    "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 126,
-   "score": 916,
-   "date": "2010-01-02T17:41:28+00:00",
-   "errors": 19
+   "needed_time": 188,
+   "score": 587,
+   "date": "2002-10-10T17:41:28+00:00",
+   "errors": 10
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 79,
   "fields": {
-   "game": 0,
-   "player": 2,
+   "game": 1,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 106,
-   "score": 1397,
-   "date": "1996-03-16T17:41:28+00:00",
-   "errors": 4
+   "needed_time": 164,
+   "score": 2786,
+   "date": "1998-04-10T17:41:28+00:00",
+   "errors": 5
   }
  },
  {
@@ -1208,77 +1208,77 @@
   "pk": 80,
   "fields": {
    "game": 1,
-   "player": 3,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 164,
-   "score": 85,
-   "date": "2001-08-15T17:41:28+00:00",
-   "errors": 2
+   "needed_time": 103,
+   "score": 1726,
+   "date": "1995-09-03T17:41:28+00:00",
+   "errors": 4
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 81,
   "fields": {
-   "game": 1,
+   "game": 0,
    "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 128,
-   "score": 707,
-   "date": "2003-08-22T17:41:28+00:00",
-   "errors": 10
+   "needed_time": 194,
+   "score": 1943,
+   "date": "1998-05-11T17:41:28+00:00",
+   "errors": 20
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 82,
   "fields": {
-   "game": 2,
+   "game": 1,
    "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 159,
-   "score": 2796,
-   "date": "1990-12-01T17:41:28+00:00",
-   "errors": 11
+   "needed_time": 158,
+   "score": 1778,
+   "date": "1995-10-22T17:41:28+00:00",
+   "errors": 16
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 83,
   "fields": {
-   "game": 3,
-   "player": 2,
+   "game": 2,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 104,
-   "score": 1383,
-   "date": "2009-06-19T17:41:28+00:00",
-   "errors": 16
+   "needed_time": 131,
+   "score": 2988,
+   "date": "1991-10-09T17:41:28+00:00",
+   "errors": 7
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 84,
   "fields": {
-   "game": 0,
+   "game": 1,
    "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 151,
-   "score": 2181,
-   "date": "1990-11-07T17:41:28+00:00",
-   "errors": 9
+   "needed_time": 162,
+   "score": 704,
+   "date": "2009-12-06T17:41:28+00:00",
+   "errors": 19
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 85,
   "fields": {
-   "game": 0,
-   "player": 1,
+   "game": 1,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 162,
-   "score": 279,
-   "date": "2010-08-20T17:41:28+00:00",
-   "errors": 12
+   "needed_time": 174,
+   "score": 2990,
+   "date": "2001-02-15T17:41:28+00:00",
+   "errors": 8
   }
  },
  {
@@ -1288,23 +1288,23 @@
    "game": 2,
    "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 108,
-   "score": 1702,
-   "date": "1991-10-19T17:41:28+00:00",
-   "errors": 2
+   "needed_time": 163,
+   "score": 809,
+   "date": "2004-08-11T17:41:28+00:00",
+   "errors": 11
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 87,
   "fields": {
-   "game": 2,
-   "player": 1,
+   "game": 1,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 121,
-   "score": 1525,
-   "date": "1997-07-19T17:41:28+00:00",
-   "errors": 12
+   "needed_time": 140,
+   "score": 1861,
+   "date": "1993-08-03T17:41:28+00:00",
+   "errors": 6
   }
  },
  {
@@ -1314,10 +1314,10 @@
    "game": 0,
    "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 116,
-   "score": 533,
-   "date": "2005-02-03T17:41:28+00:00",
-   "errors": 5
+   "needed_time": 191,
+   "score": 674,
+   "date": "2000-02-13T17:41:28+00:00",
+   "errors": 8
   }
  },
  {
@@ -1325,38 +1325,38 @@
   "pk": 89,
   "fields": {
    "game": 3,
-   "player": 2,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 122,
-   "score": 678,
-   "date": "1993-11-17T17:41:28+00:00",
-   "errors": 6
+   "needed_time": 114,
+   "score": 2427,
+   "date": "2010-10-08T17:41:28+00:00",
+   "errors": 0
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 90,
   "fields": {
-   "game": 2,
-   "player": 2,
+   "game": 0,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 121,
-   "score": 1521,
-   "date": "1998-10-14T17:41:28+00:00",
-   "errors": 13
+   "needed_time": 155,
+   "score": 1868,
+   "date": "1993-12-15T17:41:28+00:00",
+   "errors": 18
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 91,
   "fields": {
-   "game": 3,
-   "player": 3,
+   "game": 1,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 118,
-   "score": 2715,
-   "date": "2002-05-10T17:41:28+00:00",
-   "errors": 4
+   "needed_time": 184,
+   "score": 2374,
+   "date": "2008-07-03T17:41:28+00:00",
+   "errors": 14
   }
  },
  {
@@ -1364,51 +1364,51 @@
   "pk": 92,
   "fields": {
    "game": 1,
-   "player": 3,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 175,
-   "score": 1959,
-   "date": "1991-12-07T17:41:28+00:00",
-   "errors": 19
+   "needed_time": 140,
+   "score": 260,
+   "date": "1995-10-13T17:41:28+00:00",
+   "errors": 14
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 93,
   "fields": {
-   "game": 0,
-   "player": 1,
+   "game": 3,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 184,
-   "score": 313,
-   "date": "2001-08-14T17:41:28+00:00",
-   "errors": 12
+   "needed_time": 111,
+   "score": 1395,
+   "date": "2000-07-04T17:41:28+00:00",
+   "errors": 9
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 94,
   "fields": {
-   "game": 2,
+   "game": 1,
    "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 149,
-   "score": 2567,
-   "date": "1999-01-03T17:41:28+00:00",
-   "errors": 0
+   "needed_time": 191,
+   "score": 218,
+   "date": "2010-06-09T17:41:28+00:00",
+   "errors": 20
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 95,
   "fields": {
-   "game": 3,
-   "player": 0,
+   "game": 0,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 152,
-   "score": 1338,
-   "date": "2000-09-18T17:41:28+00:00",
-   "errors": 3
+   "needed_time": 197,
+   "score": 201,
+   "date": "1994-10-12T17:41:28+00:00",
+   "errors": 6
   }
  },
  {
@@ -1418,62 +1418,62 @@
    "game": 1,
    "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 115,
-   "score": 1343,
-   "date": "2010-12-20T17:41:28+00:00",
-   "errors": 10
+   "needed_time": 145,
+   "score": 2244,
+   "date": "2009-12-18T17:41:28+00:00",
+   "errors": 8
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 97,
   "fields": {
-   "game": 2,
-   "player": 3,
+   "game": 3,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 146,
-   "score": 893,
-   "date": "1997-05-02T17:41:28+00:00",
-   "errors": 10
+   "needed_time": 155,
+   "score": 813,
+   "date": "1994-09-15T17:41:28+00:00",
+   "errors": 1
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 98,
   "fields": {
-   "game": 0,
-   "player": 0,
+   "game": 3,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 136,
-   "score": 1081,
-   "date": "2001-06-02T17:41:28+00:00",
-   "errors": 5
+   "needed_time": 190,
+   "score": 698,
+   "date": "1997-09-18T17:41:28+00:00",
+   "errors": 12
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 99,
   "fields": {
-   "game": 3,
+   "game": 1,
    "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 157,
-   "score": 1349,
-   "date": "1999-06-05T17:41:28+00:00",
-   "errors": 1
+   "needed_time": 186,
+   "score": 2778,
+   "date": "2006-12-14T17:41:28+00:00",
+   "errors": 3
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 100,
   "fields": {
-   "game": 3,
-   "player": 2,
+   "game": 2,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 103,
-   "score": 1959,
-   "date": "2010-07-20T17:41:28+00:00",
-   "errors": 5
+   "needed_time": 116,
+   "score": 2195,
+   "date": "1990-01-06T17:41:28+00:00",
+   "errors": 18
   }
  },
  {
@@ -1483,22 +1483,22 @@
    "game": 0,
    "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 186,
-   "score": 1383,
-   "date": "2003-08-15T17:41:28+00:00",
-   "errors": 9
+   "needed_time": 113,
+   "score": 1323,
+   "date": "2003-11-02T17:41:28+00:00",
+   "errors": 19
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 102,
   "fields": {
-   "game": 1,
-   "player": 2,
+   "game": 0,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 109,
-   "score": 2342,
-   "date": "1996-12-10T17:41:28+00:00",
+   "needed_time": 114,
+   "score": 1678,
+   "date": "1998-08-22T17:41:28+00:00",
    "errors": 18
   }
  },
@@ -1506,13 +1506,13 @@
   "model": "reeduc.playedgame",
   "pk": 103,
   "fields": {
-   "game": 2,
-   "player": 2,
+   "game": 3,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 131,
-   "score": 2905,
-   "date": "1995-11-10T17:41:28+00:00",
-   "errors": 3
+   "needed_time": 110,
+   "score": 1694,
+   "date": "2001-02-22T17:41:28+00:00",
+   "errors": 4
   }
  },
  {
@@ -1520,142 +1520,142 @@
   "pk": 104,
   "fields": {
    "game": 1,
-   "player": 0,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 132,
-   "score": 2382,
-   "date": "2006-01-21T17:41:28+00:00",
-   "errors": 1
+   "needed_time": 164,
+   "score": 2056,
+   "date": "1997-08-11T17:41:28+00:00",
+   "errors": 5
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 105,
   "fields": {
-   "game": 2,
-   "player": 3,
+   "game": 3,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 178,
-   "score": 77,
-   "date": "2007-10-05T17:41:28+00:00",
-   "errors": 7
+   "needed_time": 148,
+   "score": 1535,
+   "date": "1997-08-12T17:41:28+00:00",
+   "errors": 8
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 106,
   "fields": {
-   "game": 2,
-   "player": 1,
+   "game": 1,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 102,
-   "score": 883,
-   "date": "2000-01-07T17:41:28+00:00",
-   "errors": 10
+   "needed_time": 185,
+   "score": 1445,
+   "date": "1998-10-02T17:41:28+00:00",
+   "errors": 15
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 107,
   "fields": {
-   "game": 2,
+   "game": 3,
    "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 174,
-   "score": 1275,
-   "date": "2010-10-21T17:41:28+00:00",
-   "errors": 18
+   "needed_time": 136,
+   "score": 1963,
+   "date": "2003-11-11T17:41:28+00:00",
+   "errors": 12
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 108,
   "fields": {
-   "game": 1,
-   "player": 2,
+   "game": 2,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 112,
-   "score": 1515,
-   "date": "1997-10-04T17:41:28+00:00",
-   "errors": 14
+   "needed_time": 188,
+   "score": 272,
+   "date": "1998-05-17T17:41:28+00:00",
+   "errors": 20
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 109,
   "fields": {
-   "game": 3,
-   "player": 2,
+   "game": 1,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 170,
-   "score": 2420,
-   "date": "1997-01-24T17:41:28+00:00",
-   "errors": 18
+   "needed_time": 146,
+   "score": 101,
+   "date": "1992-11-23T17:41:28+00:00",
+   "errors": 10
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 110,
   "fields": {
-   "game": 1,
-   "player": 3,
+   "game": 2,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 128,
-   "score": 1707,
-   "date": "2005-09-16T17:41:28+00:00",
-   "errors": 11
+   "needed_time": 146,
+   "score": 78,
+   "date": "1996-07-04T17:41:28+00:00",
+   "errors": 1
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 111,
   "fields": {
-   "game": 0,
-   "player": 1,
+   "game": 2,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 113,
-   "score": 1253,
-   "date": "1996-12-07T17:41:28+00:00",
-   "errors": 7
+   "needed_time": 128,
+   "score": 1902,
+   "date": "2005-02-04T17:41:28+00:00",
+   "errors": 11
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 112,
   "fields": {
-   "game": 2,
-   "player": 3,
+   "game": 0,
+   "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 195,
-   "score": 1941,
-   "date": "2005-08-24T17:41:28+00:00",
-   "errors": 15
+   "needed_time": 139,
+   "score": 2068,
+   "date": "2006-07-10T17:41:28+00:00",
+   "errors": 11
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 113,
   "fields": {
-   "game": 3,
-   "player": 2,
+   "game": 0,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 134,
-   "score": 2102,
-   "date": "1999-01-21T17:41:28+00:00",
-   "errors": 9
+   "needed_time": 108,
+   "score": 693,
+   "date": "2003-08-15T17:41:28+00:00",
+   "errors": 10
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 114,
   "fields": {
-   "game": 0,
-   "player": 1,
+   "game": 3,
+   "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 187,
-   "score": 511,
-   "date": "1992-12-17T17:41:28+00:00",
-   "errors": 5
+   "needed_time": 182,
+   "score": 333,
+   "date": "1993-12-07T17:41:28+00:00",
+   "errors": 6
   }
  },
  {
@@ -1665,62 +1665,62 @@
    "game": 1,
    "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 113,
-   "score": 168,
-   "date": "1995-02-13T17:41:28+00:00",
-   "errors": 1
+   "needed_time": 123,
+   "score": 2681,
+   "date": "2009-10-09T17:41:28+00:00",
+   "errors": 12
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 116,
   "fields": {
-   "game": 2,
+   "game": 0,
    "player": 2,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 176,
-   "score": 719,
-   "date": "2003-11-20T17:41:28+00:00",
-   "errors": 5
+   "needed_time": 125,
+   "score": 1992,
+   "date": "1996-12-25T17:41:28+00:00",
+   "errors": 7
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 117,
   "fields": {
-   "game": 3,
+   "game": 0,
    "player": 0,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 176,
-   "score": 1694,
-   "date": "1998-02-14T17:41:28+00:00",
-   "errors": 12
+   "needed_time": 186,
+   "score": 1537,
+   "date": "2003-12-19T17:41:28+00:00",
+   "errors": 11
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 118,
   "fields": {
-   "game": 3,
-   "player": 3,
+   "game": 1,
+   "player": 1,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 192,
-   "score": 1069,
-   "date": "2006-06-01T17:41:28+00:00",
-   "errors": 14
+   "needed_time": 162,
+   "score": 309,
+   "date": "1997-04-19T17:41:28+00:00",
+   "errors": 9
   }
  },
  {
   "model": "reeduc.playedgame",
   "pk": 119,
   "fields": {
-   "game": 1,
-   "player": 0,
+   "game": 3,
+   "player": 3,
    "comments": "Beaucoup d'erreurs ont été détectées avec l'index",
-   "needed_time": 118,
-   "score": 1341,
-   "date": "2008-12-09T17:41:28+00:00",
-   "errors": 19
+   "needed_time": 123,
+   "score": 2741,
+   "date": "2008-01-05T17:41:28+00:00",
+   "errors": 15
   }
  }
 ]

@@ -62,14 +62,17 @@ def index(request):
 
 @login_required
 def home(request):
-    return render(request, 'home.html')
+    game = 0
+
+    return render(request, 'home.html', {'games': game})
 
 
 # Best decorator ever ->
 @login_required
-def view(request):
+def view(request, games):
+
     # Get all played games by this user
-    playedGames = PlayedGame.objects.filter(player_id=request.user.id, game_id=0)
+    playedGames = PlayedGame.objects.filter(player_id=request.user.id, game_id=games)
     # Step 1: Create a DataPool with the data we want to retrieve.
     datas = \
         DataPool(
@@ -102,12 +105,8 @@ def view(request):
                     'text': 'Date'}}})
 
     # Step 3: Send the chart object to the template.
+
     return render(request, 'view.html', {'chart': cht, 'playedGames': playedGames})
-
-
-@login_required
-def homeSelected(request):
-    return render(request, 'homeSelected.html')
 
 @login_required
 def informations(request):
@@ -213,4 +212,3 @@ def account(request):
                                             'played_games': played_games,
                                             'max_score': max_score,
                                             'min_time': min_time})
-    # TODO Récupérer la valeur du jeu sélectionner dans home et remplace le game_id=1 dans la fonction view ci-dessus pas le bon id
