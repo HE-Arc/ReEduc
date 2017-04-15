@@ -114,6 +114,7 @@ def view(request, games):
 
 @login_required
 def informations(request):
+
     # Récupération des infos du formulaires
     user_firstname = request.POST.get('firstname')
     user_lastname = request.POST.get('lastname')
@@ -142,65 +143,66 @@ def informations(request):
     player_rightarm = request.POST.get('rightarm', False)
     player_strongarm = request.POST.get('player_strongarm')
 
-    HandicapsVals = []
-    HandicapsVals.append(player_thumbleft)
-    HandicapsVals.append(player_forefingerleft)
-    HandicapsVals.append(player_middlefingerleft)
-    HandicapsVals.append(player_ringfingerleft)
-    HandicapsVals.append(player_littlefingerleft)
-    HandicapsVals.append(player_thumbright)
-    HandicapsVals.append(player_forefingerright)
-    HandicapsVals.append(player_middlefingerright)
-    HandicapsVals.append(player_ringfingerright)
-    HandicapsVals.append(player_littlefingerright)
-    HandicapsVals.append(player_leftarm)
-    HandicapsVals.append(player_rightarm)
+    if user_firstname is not None:
+        HandicapsVals = []
+        HandicapsVals.append(player_thumbleft)
+        HandicapsVals.append(player_forefingerleft)
+        HandicapsVals.append(player_middlefingerleft)
+        HandicapsVals.append(player_ringfingerleft)
+        HandicapsVals.append(player_littlefingerleft)
+        HandicapsVals.append(player_thumbright)
+        HandicapsVals.append(player_forefingerright)
+        HandicapsVals.append(player_middlefingerright)
+        HandicapsVals.append(player_ringfingerright)
+        HandicapsVals.append(player_littlefingerright)
+        HandicapsVals.append(player_leftarm)
+        HandicapsVals.append(player_rightarm)
 
-    strHandicaps = ""
-    for i in range(len(HandicapsVals)):
-        if HandicapsVals[i]:
-            strHandicaps += "F;"
+        strHandicaps = ""
+        for i in range(len(HandicapsVals)):
+            if HandicapsVals[i]:
+                strHandicaps += "F;"
+            else:
+                strHandicaps += "T;"
+        genderValue = ''
+        if player_gender == 'Man':
+            genderValue = 'M'
         else:
-            strHandicaps += "T;"
-    genderValue = ''
-    if player_gender == 'Man':
-        genderValue = 'M'
-    else:
-        genderValue = 'F'
+            genderValue = 'F'
 
-    strongArmValue = ''
-    if player_strongarm == 'Left':
-        strongArmValue = 'L'
-    else:
-        strongArmValue = 'R'
+        strongArmValue = ''
+        if player_strongarm == 'Left':
+            strongArmValue = 'L'
+        else:
+            strongArmValue = 'R'
 
-    # Create a new User
-    user = User(
-        first_name=user_firstname,
-        is_staff=True,
-        is_superuser=True,
-        last_name=user_lastname,
-    )
-    user.save()
+        # get the User to
+        user = User.objects.get(pk=request.user.id)
+        user.first_name = user_firstname
+        user.last_name = user_lastname
+        user.is_staff = True
+        user.is_superuser = True
+        user.save()
 
-    # Generate spec_id
-    player_spec_id = get_random_string(length=6)
-    while (Player.objects.filter(spec_id=player_spec_id).exists()):
+        # Generate spec_id
         player_spec_id = get_random_string(length=6)
+        while (Player.objects.filter(spec_id=player_spec_id).exists()):
+            player_spec_id = get_random_string(length=6)
 
-    # Create a new Player (player is an extention of user)
-    p = Player(user=User.objects.get(username=user_username),
-               size=player_height,
-               weight=player_weight,
-               gender=genderValue,
-               strong_arm=strongArmValue,
-               handicap=strHandicaps,
-               birthdate=player_birthdate,
-               spec_id=player_spec_id,
-               phone_number=player_phone,
-               )
-    p.save()
-    return render(request, 'informations.html')
+        # Create a new Player (player is an extention of user)
+        p = Player.objects.get(user=User.objects.get(username=user.username))
+        p.size=player_height
+        p.weight=player_weight
+        p.gender=genderValue
+        p.strong_arm=strongArmValue
+        p.handicap=strHandicaps
+        p.birthdate=player_birthdate
+        p.spec_id=player_spec_id
+        p.phone_number=player_phone
+        p.save()
+        return render(request, 'account.html')
+    else:
+        return render(request, 'informations.html')
 
 @login_required
 def account(request):

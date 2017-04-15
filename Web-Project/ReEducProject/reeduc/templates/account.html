@@ -1,46 +1,145 @@
 {% extends 'templateApp.html' %}
 {% block body %}
+<div class="col s12 z-depth-4 card-panel valign">
     <div class="row">
     <div class="col s10 offset-s1" style="text-align:center">
         <h3>Account informations</h3>
     </div>
     <div class="col s10 offset-s1">
-        <div class="col s5 offset-s3">
-            <p>First name :</p>
-            <p>Last name : </p>
-            <p>Username : </p>
-            <p>Email : </p>
-            <p>Account creation date : </p>
-            <p>Last login date : </p>
-            <p>Size : </p>
-            <p>Weight : </p>
-            <p>Gender : </p>
-            <p>Strong arm : </p>
-            <p>Birthdate : </p>
-            <p>Specifical id : </p>
-            <p>Phone number : </p>
-            <p>Played games : </p>
-            <p>Best score : </p>
-            <p>Best time : </p>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>First name :</p>
+            </div>
+            <div class="col s4">
+                <p>{{ actual_user.first_name }} </p>
+            </div>
         </div>
-        <div class="col s4">
-            <p>{{ actual_user.first_name }} </p>
-            <p>{{ actual_user.last_name }} </p>
-            <p>{{ actual_user.username }} </p>
-            <p>{{ actual_user.email }} </p>
-            <p>{{ actual_user.date_joined }} </p>
-            <p>{{ actual_user.last_login }} </p>
-            <p>{{ actual_player.size }} cm</p>
-            <p>{{ actual_player.weight }} kg</p>
-            <p>{{ actual_player.gender }}</p>
-            <p>{{ actual_player.strong_arm }}</p>
-            <p>{{ actual_player.birthdate }}</p>
-            <p>{{ actual_player.spec_id }}</p>
-            <p>{{ actual_player.phone_number}}</p>
-            <p>{{ played_games.count }}</p>
-            <p>{{ max_score }} points</p>
-            <p>{{ min_time }} secondes</p>
+         <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Last name : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ actual_user.last_name }} </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Username : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ actual_user.username }} </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Email : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ actual_user.email }} </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Account creation date : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ actual_user.date_joined }} </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Last login date : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ actual_user.last_login }} </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Size : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ actual_player.size }} cm</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Weight : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ actual_player.weight }} kg</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Gender : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ actual_player.gender }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Strong arm : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ actual_player.strong_arm }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Birthdate : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ actual_player.birthdate }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Specifical id : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ actual_player.spec_id }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Phone number : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ actual_player.phone_number}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Played games : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ played_games.count }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Best score : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ max_score }} points</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5 offset-s3">
+                <p>Best time : </p>
+            </div>
+            <div class="col s4">
+                <p>{{ min_time }} secondes</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s2.5 offset-s3">
             <a href="{% url 'informations' %}" class="btn waves-effect waves-light teal lighten-3 col s12">Modify informations</a>
+            </div>
         </div>
+    </div>
+    </div>
     </div>
 {% endblock %}
