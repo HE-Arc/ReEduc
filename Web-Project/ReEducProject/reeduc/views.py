@@ -121,7 +121,7 @@ def informations(request):
 
     player_birthdate = request.POST.get('birthdate')
     player_phone = request.POST.get('phone')
-    player_gender = request.POST.get('gender')
+    player_gender = request.POST.get('genderMan')
     player_height = request.POST.get('height')
     player_weight = request.POST.get('weight')
 
@@ -141,7 +141,7 @@ def informations(request):
     # Arms
     player_leftarm = request.POST.get('leftarm', False)
     player_rightarm = request.POST.get('rightarm', False)
-    player_strongarm = request.POST.get('player_strongarm')
+    player_strongarm = request.POST.get('strongarm')
 
     if user_firstname is not None:
         HandicapsVals = []
@@ -200,7 +200,7 @@ def informations(request):
         p.spec_id=player_spec_id
         p.phone_number=player_phone
         p.save()
-        return render(request, 'account.html')
+        return account(request)
     else:
         return render(request, 'informations.html')
 
