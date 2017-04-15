@@ -49,11 +49,15 @@ def subscribe(request):
                 )
                 user.set_password(user_password)
                 user.save()
-                print(user)
+                p = Player(user=User.objects.get(username=user_username),
+                           size=0,
+                           weight=0,
+                           birthdate="0001-01-01"
+                          )
+                p.save()
                 return render(request, 'login.html')
     else:
         return render(request, 'subscribe.html')
-    # return render(request, 'login.html')
 
 # Website content pages
 def index(request):
