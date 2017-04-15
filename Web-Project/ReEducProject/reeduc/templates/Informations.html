@@ -4,36 +4,29 @@
     <div class="col s12 z-depth-4 card-panel valign">
         <div class="row">
             <div class="input-field col s12 center">
-                <!--<img src="images/login-logo.png" alt="" class="circle responsive-img valign profile-image-login">-->
                 <h4>Please enter your informations</h4>
             </div>
         </div>
         <div class="row">
-            <form class="subscribe-form" action='/reeduc/subscribe/' method='post'> {% csrf_token %}
+            <form class="subscribe-form" action="{% url 'account' %}" method='post'> {% csrf_token %}
                 <div class="row">
                     <div class="col s6">
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="firstname" type="text" name="firstname">
+                                <input id="firstname" type="text" name="firstname" required>
                                 <label for="firstname" class="center-align">First Name</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="lastname" type="text" name="lastname">
+                                <input id="lastname" type="text" name="lastname" required>
                                 <label for="lastname" class="center-align">Last Name</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="birthdate" type="text" name="birthdate">
+                                <input id="birthdate" type="text" name="birthdate" placeholder="yyyy-mm-dd" pattern="(19[0-9][0-9]|20[012][0-9])-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" required>
                                 <label for="birthdate" class="center-align">Birth Date</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="email" type="email" name="email">
-                                <label for="email" class="center-align">E-Mail</label>
                             </div>
                         </div>
                         <div class="row">
@@ -57,11 +50,11 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s6">
-                                <input id="height" type="text" name="height"><!-- modif type -->
+                                <input id="height" type="number" min="100" max="220" name="height">
                                 <label for="height" class="center-align">Height</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="weight" type="text" name="weight"><!-- modif type -->
+                                <input id="weight" type="number" min="40" max="200" name="weight">
                                 <label for="weight" class="center-align">Weight</label>
                             </div>
                         </div>
