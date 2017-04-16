@@ -121,7 +121,7 @@ def informations(request):
 
     player_birthdate = request.POST.get('birthdate')
     player_phone = request.POST.get('phone')
-    player_gender = request.POST.get('genderMan')
+    player_gender = request.POST.get('gender')
     player_height = request.POST.get('height')
     player_weight = request.POST.get('weight')
 
