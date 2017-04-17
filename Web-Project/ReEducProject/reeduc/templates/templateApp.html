@@ -16,7 +16,11 @@
                         <div class="nav-wrapper grey lighten-5">
                             <ul class="right">
                                 <!-- Dropdown Trigger -->
+                                {% if user.is_authenticated %}
+                               <li><a href="{% url 'logout' %}" class="teal-text text-lighten-3">logout</a></li>
+                                {% else %}
                                 <li><a href="{% url 'login' %}" class="teal-text text-lighten-3">login</a></li>
+                                {% endif %}
                                 <li><a href="{% url 'subscribe' %}" class="teal-text text-lighten-3">subscribe</a>
                                 </li>
                             </ul>

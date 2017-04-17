@@ -1,8 +1,5 @@
 {% extends 'templateApp.html' %}
 {% block body %}
-{% if user.is_authenticated %}
-<p><a href="logout.html">Logout</a></p>
-{% else %}
 <div id="login-page" class="valign-wrapper">
     <div class="col s6 z-depth-4 card-panel valign">
         <form class="login-form" action="{% url 'login' %}" method='post' >  {% csrf_token %}
@@ -50,5 +47,4 @@
         </form>
     </div>
 </div>
-{% endif %}
 {% endblock %}

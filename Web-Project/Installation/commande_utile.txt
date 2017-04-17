@@ -111,5 +111,5 @@ python manage.py loaddata ./fixtures/initial_data.json
 
 
 Utilisation de la partie Login de l'application. Pour pouvoir utiliser le login de l'appliation il faut créer un superuser:
-    -   Pour cela rend-vous dans votre environement virtuel et entrer cette commande: python manage.py createsuperuser
-    -   Remplissez les informations demandez et utiliser ce compte pour vous loguer
+ -   Pour cela rend-vous dans votre environement virtuel et entrer cette commande: python manage.py createsuperuser
+  -   Remplissez les informations demandez et utiliser ce compte pour vous loguer
