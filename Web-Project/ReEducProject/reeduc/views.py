@@ -7,7 +7,6 @@ from django.contrib.auth.models import User
 from django.utils.crypto import get_random_string
 from django.db.models import Max
 from django.db.models import Min
-from django.http import HttpResponse
 
 
 # Website authentification pages
@@ -26,6 +25,7 @@ def login(request):
     else:
         return render(request, 'login.html')
 
+# XXX à quoi je sers moi?
 def test(request):
     return render(request, 'subscribe.html')
 
@@ -159,6 +159,7 @@ def informations(request):
         HandicapsVals.append(player_rightarm)
 
         strHandicaps = ""
+        # XXX Ceci n'est pas pythonique du tout.
         for i in range(len(HandicapsVals)):
             if HandicapsVals[i]:
                 strHandicaps += "F;"
@@ -180,6 +181,7 @@ def informations(request):
         user = User.objects.get(pk=request.user.id)
         user.first_name = user_firstname
         user.last_name = user_lastname
+        # Tout le monde est super utilisateur, yay!
         user.is_staff = True
         user.is_superuser = True
         user.save()

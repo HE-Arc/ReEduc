@@ -21,12 +21,14 @@ SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '3#ls84x+@o*3vx2%2+bg&v^+g8c&#m1x&j@1yo!ce16f)9ed2-'
+SECRET_KEY = os.environ.get('SECRET_KEY', '3#ls84x+@o*3vx2%2+bg&v^+g8c&#m1x&j@1yo!ce16f)9ed2-')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["reeduc.srvz-webapp.he-arc.ch"]
+ALLOWED_HOSTS = ["reeduc.srvz-webapp.he-arc.ch", "localhost"]
+
+INTERNAL_IPS = ['127.0.0.1']
 
 # Application definition
 
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'reeduc',
     'materialize',
     'chartit',
+    'debug_toolbar'
 ]
 
 MIDDLEWARE = [
@@ -50,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'ReEducProject.urls'
@@ -78,10 +82,10 @@ WSGI_APPLICATION = 'ReEducProject.wsgi.application'
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': os.environ.get('GROUPNAME'),
-    'USER': os.environ.get('GROUPNAME', 'postgres'),
-    'PASSWORD': os.environ.get('PASSWORD', ''),
-    'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
+    'NAME': os.environ.get('GROUPNAME', 'django'),
+    'USER': os.environ.get('GROUPNAME', 'django'),
+    'PASSWORD': os.environ.get('PASSWORD', 'django'),
+    'HOST': os.environ.get('POSTGRES_HOST', '127.0.0.1'),
     'PORT': os.environ.get('POSTGRES_PORT', '5432')
   }
 }

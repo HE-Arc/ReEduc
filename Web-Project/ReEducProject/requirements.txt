@@ -1,8 +1,5 @@
-appdirs
 Django
 django-materialize-css
-packaging
 psycopg2
-pyparsing
-six
 django_chartit
+django-debug-toolbar

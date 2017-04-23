@@ -39,6 +39,7 @@ def GenerateUser():
     username = ["cyrilmanuel", "user1", "user2", "user3"]
     fname = ["cyril", "user", "user", "user"]
     lname = ["jeanneret", "user", "user", "user"]
+    # XXX: utilisez zip()!
     for i in range(0, 4):
         a = (("username", username[i]), ("first_name", fname[i]), ("last_name", lname[i]), ("is_active", True),
              ("is_superuser", False),
@@ -69,6 +70,7 @@ def GeneratePlayer():
 def GeneratePlayed():
     f = []
     for i in range(0, 120):
+        # XXX: UTF-8, c'est bon, mangez-en!
         a = (("game", random.randint(0, 3)), ("player", random.randint(0, 3)),
              ("comments", "Beaucoup d'erreurs ont \u00e9t\u00e9 d\u00e9tect\u00e9es avec l'index"),
              ("needed_time", random.randint(100, 200)),
@@ -95,3 +97,4 @@ with io.open('initial_data.json', 'w', encoding='utf8') as outfile:
 with open('initial_data.json') as data_file:
     data_loaded = json.load(data_file)
 
+    # XXX pour en faire quoi?
